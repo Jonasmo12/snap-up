@@ -6,11 +6,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
-  url = "";
+  url = "https://fakestoreapi.com/products";
 
   constructor(private http: HttpClient) { }
 
-  getProduct() {
+  getProducts() {
     return this.http.get(this.url)
   }
 }
