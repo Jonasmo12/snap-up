@@ -1,0 +1,50 @@
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    align-items: center;
+    height: 6rem;
+    border-bottom: 1px solid black;
+    padding-top: 1.5rem;
+    padding-right: 4rem;
+    padding-right: 3rem;
+}
+
+nav .logo{
+    
+}
+
+nav .logo ul{
+    list-style: none;
+    align-items: center;
+}
+nav .logo ul li{
+    padding-left: 1rem;
+}
+
+nav .list ul{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+   
+    
+}
+
+nav .list li{
+    padding-left: 2rem;
+
+}
+
+nav .list li img{
+    width: 1.9rem;
+
+}
+
+nav .list li input{
+    height: 2rem;
+    padding-right: 2rem;
+    border:none;
+}
