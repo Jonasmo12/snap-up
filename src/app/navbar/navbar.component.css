@@ -13,13 +13,22 @@ nav{
 nav .logo{
     padding-left: 4rem;
 }
+
+nav .logo ul{
+    list-style: none;
+    align-items: center;
+}
+nav .logo ul li{
+    padding-left: 1rem;
+}
+
 nav .list ul{
     text-decoration: none;
     display: flex;
     flex-direction: row;
     list-style: none;
     padding-right: 4rem;
-    padding-top: 0.9rem
+    
 }
 
 nav .list li{
