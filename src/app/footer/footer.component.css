@@ -1,0 +1,8 @@
+.banner{
+    height: 10rem;
+    background: url("../../assets/banner-pictures/pexels-allec-gomes-12306417.jpg");
+    justify-content: space-between;
+    padding-left: 6rem;
+    padding-right: 6rem;
+    align-items: center;
+}
