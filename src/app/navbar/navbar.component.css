@@ -19,7 +19,7 @@ nav .list ul{
     flex-direction: row;
     list-style: none;
     padding-right: 4rem;
-    padding-top: 1rem
+    padding-top: 0.9rem
 }
 
 nav .list li{
@@ -35,4 +35,5 @@ nav .list li img{
 nav .list li input{
     height: 2rem;
     padding-right: 2rem;
+    border:none;
 }
