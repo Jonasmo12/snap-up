@@ -1,0 +1,38 @@
+.banner-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%; /* Ensure the container spans the full width */
+}
+
+.banner-pic {
+    width: 100%;
+    height: 610px;
+    flex-shrink: 0;
+    padding-right: 3rem;
+    padding-left: 3rem;
+    /* Ensure the image covers the entire space */
+    object-fit: cover;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.text-overlay h1,
+.text-overlay h3 {
+    margin: 0;
+}
+
+.text-overlay h1 span{
+    font-weight: bold;
+    color: white; 
+    font-family: sans-serif;
+}

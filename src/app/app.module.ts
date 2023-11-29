@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
+import { BannerComponent } from './banner/banner.component';
 import { ProductComponent } from './product/product.component';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { ProductComponent } from './product/product.component';
     NavbarComponent,
     LoginComponent,
     CartComponent,
+    BannerComponent,
     CartComponent,
     ProductComponent
   ],
