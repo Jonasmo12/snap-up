@@ -31,8 +31,21 @@
     margin: 0;
 }
 
-.text-overlay h1 span{
-    font-weight: bold;
+h1{
+    font-weight: 800;
     color: white; 
     font-family: sans-serif;
+    font-style: normal;
+}
+h3{
+    font-weight: 800;
+    color: white; 
+    font-family: sans-serif;
+    font-style: normal;
+}
+.inner-text
+{
+    color: #3D5585;
+    font-weight: 800;
+    font-style: normal;
 }
