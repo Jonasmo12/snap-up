@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
 import { FeaturedBrandsComponent } from './featured-brands/featured-brands.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavbarComponent,
     LoginComponent,
     CartComponent,
-    FeaturedBrandsComponent
+    FeaturedBrandsComponent,
+    NewArrivalsComponent
   ],
   imports: [
     BrowserModule,
