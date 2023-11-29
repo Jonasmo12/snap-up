@@ -12,7 +12,9 @@ import { ProductComponent } from './product/product.component';
   declarations: [
     AppComponent,
     NavbarComponent,
+    NavbarComponent,
     LoginComponent,
+    CartComponent,
     CartComponent,
     ProductComponent
   ],
