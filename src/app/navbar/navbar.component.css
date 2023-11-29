@@ -24,6 +24,14 @@ nav .logo ul li{
     padding-left: 1rem;
 }
 
+nav .logo ul{
+    list-style: none;
+    align-items: center;
+}
+nav .logo ul li{
+    padding-left: 1rem;
+}
+
 nav .list ul{
     text-decoration: none;
     display: flex;
