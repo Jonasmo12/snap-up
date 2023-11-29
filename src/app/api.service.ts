@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 import { Product } from './Product';
 
 @Injectable({
@@ -8,9 +8,13 @@ import { Product } from './Product';
 })
 export class ApiService {
 
-  url = "https://fakestoreapi.com/products";
+  // private productsUrl = 'https://fakestoreapi.com/products';
 
-  constructor(private http: HttpClient) { }
+  // constructor(private http: HttpClient) { }
 
+  
 
+  // getProducts(): Observable<Product[]> {
+  //   return this.http.get<Product[]>(this.productsUrl)
+  // }
 }
