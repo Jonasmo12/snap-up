@@ -11,6 +11,7 @@ import { HttpClient } from '@angular/common/http'
 export class ProductComponent implements OnInit {
 
   url = "";
+  
   constructor(private cartService: CartService, private http: HttpClient) {}
 
   ngOnInit(): void {
