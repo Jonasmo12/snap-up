@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ProductListComponent {
 
+  public products$!: Observable<Product[]>;
+
+  constructor(private apiService: ApiService) {}
+
+
+  ngOnInit(): void {
+      this.products$ = this.apiService.getProducts();
+  }
 }
