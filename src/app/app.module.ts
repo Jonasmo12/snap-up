@@ -23,7 +23,6 @@ import { CategoriesComponent } from './categories/categories.component';
     NavbarComponent,
     NavbarComponent,
     LoginComponent,
-    
     BannerComponent,
     CartComponent,
     ProductComponent,
@@ -38,7 +37,7 @@ import { CategoriesComponent } from './categories/categories.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgModule,
+    // NgModule,
     HttpClientModule,
     
   ],
