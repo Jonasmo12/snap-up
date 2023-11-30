@@ -27,6 +27,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 =======
     LoginComponent,
     CartComponent,
+    BannerComponent,
     CartComponent,
     ProductComponent
 >>>>>>> 0c0bfb4 (app.module.ts file conflicts)
