@@ -10,6 +10,7 @@ import { CartComponent } from './cart/cart.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductComponent } from './product/product.component';
 import { ApiService } from './api.service';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ApiService } from './api.service';
     CartComponent,
     BannerComponent,
     CartComponent,
-    ProductComponent
+    ProductComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
