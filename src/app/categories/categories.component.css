@@ -1,0 +1,13 @@
+.avatar-container
+{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+}
+.category-pic1, .category-pic2, .category-pic3, .category-pic4, .category-pic5
+{
+    width:200px;
+    height: 200px;
+    margin-top: 50px;
+}

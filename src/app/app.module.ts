@@ -16,6 +16,7 @@ import { FeaturedBrandsComponent } from './featured-brands/featured-brands.compo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { FooterComponent } from './footer/footer.component';
     ProductListComponent,
     FeaturedBrandsComponent,
     NewArrivalsComponent,
-    FooterComponent
+    FooterComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
