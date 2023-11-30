@@ -10,6 +10,8 @@ import { Product } from '../Product';
 })
 export class ProductListComponent implements OnInit {
 
+
+  page = 4;
   public products$!: Observable<Product[]>;
 
   constructor(private apiService: ApiService) {}
