@@ -13,7 +13,6 @@ import { ProductComponent } from './product/product.component';
 import { ApiService } from './api.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FeaturedBrandsComponent } from './featured-brands/featured-brands.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -38,7 +37,7 @@ import { CategoriesComponent } from './categories/categories.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
+    NgModule,
     HttpClientModule,
     
   ],
