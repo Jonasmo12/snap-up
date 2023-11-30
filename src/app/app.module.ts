@@ -17,7 +17,6 @@ import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoriesComponent } from './categories/categories.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
