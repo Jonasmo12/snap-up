@@ -16,6 +16,11 @@ import { FeaturedBrandsComponent } from './featured-brands/featured-brands.compo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
+import { FashionComponent } from './fashion/fashion.component';
+import { JeweleryComponent } from './jewelery/jewelery.component';
+import { ElectronicsComponent } from './electronics/electronics.component';
+import { MensClothesComponent } from './mens-clothes/mens-clothes.component';
+import { WomensClothesComponent } from './womens-clothes/womens-clothes.component';
 
 
 @NgModule({
@@ -31,7 +36,12 @@ import { FooterComponent } from './footer/footer.component';
     ProductListComponent,
     FeaturedBrandsComponent,
     NewArrivalsComponent,
-    FooterComponent
+    FooterComponent,
+    FashionComponent,
+    JeweleryComponent,
+    ElectronicsComponent,
+    MensClothesComponent,
+    WomensClothesComponent
   ],
   imports: [
     BrowserModule,

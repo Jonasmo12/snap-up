@@ -5,23 +5,20 @@ import { Product } from '../Product';
 import { CartService } from '../cart.service';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: 'app-electronics',
+  templateUrl: './electronics.component.html',
+  styleUrls: ['./electronics.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class ElectronicsComponent {
 
+  public electronics$!: Observable<Product[]>;
 
-  page = 4;
-  public products$!: Observable<Product[]>;
-
-  constructor(private apiService: ApiService, private cartService:CartService) {}
+  constructor(private apiService: ApiService, private cartService: CartService) {}
 
 
   ngOnInit(): void {
-      this.products$ = this.apiService.getProducts();
+      this.electronics$ = this.apiService.getElectronics();
   }
-
   addToCart(product: any) {
     this.cartService.addToCart(product);
     console.log('Product added to cart:', product);

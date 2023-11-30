@@ -7,13 +7,19 @@ import { ProductComponent } from './product/product.component';
 import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { JeweleryComponent } from './jewelery/jewelery.component';
+import { ElectronicsComponent } from './electronics/electronics.component';
+import { MensClothesComponent } from './mens-clothes/mens-clothes.component';
 
 const routes: Routes = [
   {path: '', component: BannerComponent},
   {path: 'login', component: LoginComponent},
   {path: 'cart', component: CartComponent},
   {path: 'product', component: ProductComponent},
-  { path: 'products', component: ProductListComponent}
+  { path: 'products', component: ProductListComponent},
+  {path:'jewelery', component:JeweleryComponent},
+  {path:'electronics',component:ElectronicsComponent},
+  {path: 'men',component:MensClothesComponent}
   // {path: '', redirectTo: '', pathMatch: 'full' },
 ];
 
