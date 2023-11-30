@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductComponent } from './product/product.component';
+import { ApiService } from './api.service';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { ProductComponent } from './product/product.component';
     HttpClientModule,
     
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
