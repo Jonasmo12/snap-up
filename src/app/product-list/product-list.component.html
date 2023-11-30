@@ -1,1 +1,8 @@
-<p>product-list works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let product of products$ | async">
+            {{product.id}}
+            {{product.title}}
+        </div>
+    </div>
+</div>
