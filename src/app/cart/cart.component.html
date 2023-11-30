@@ -1,51 +1,9 @@
-<div class="container">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="row">
-                <div class="col-lg-5">
-                    <p>items</p>
+<!-- cart.component.html -->
 
-                    <div class ="card" style="width: auto;">
+<h2>Shopping Cart</h2>
 
-                        <div class="card-body d-flex">
-                            <img class="card-img-top"
-                                src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR3HXf3lMzAUweGAWu9EVU9JPebc1Ve4hkl8esXjL2hoA88ANrdlkzDBptbsMjMiZVvHkJiONRZ6kHPvGT_h7CKuXFP-EUd14FG7HDX7M_WCGGmdgrbStuV3aicBVpn3bBVIWNrMQ&usqp=CAc"
-                                alt="">
-                            <div>
-                                <h5>pool neck</h5>
-                                <p class="card-text">This is the description of the item in question.
-                                </p>
-                                <p>Most preferred for gent</p>
-                                <p>Change</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3">
-                    <p>Price</p>
-                    <p>R599.99</p>
-                </div>
-
-               
-
-                <div class="col-lg-3">
-                    <p>TOTAL</p>
-                    <p>R599.99</p>
-                    <button class="btn btn-danger" type="button" width="12px"> REMOVE </button>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <hr>
-                </div>
-            </div>
-        </div>
-    </div>
+<div *ngFor="let item of items;let i = index">
+  {{ item.title }} - R{{ item.price }}
+  <button (click)="removeItem(i)">Remove from Cart</button>
 </div>
+
