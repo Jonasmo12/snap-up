@@ -11,7 +11,6 @@ import { BannerComponent } from './banner/banner.component';
 import { ProductComponent } from './product/product.component';
 import { ApiService } from './api.service';
 import { ProductListComponent } from './product-list/product-list.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -29,7 +28,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgbModule,
     
   ],
   providers: [ApiService],
