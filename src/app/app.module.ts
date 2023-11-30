@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,6 +8,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { CartComponent } from './cart/cart.component';
+import { BannerComponent } from './banner/banner.component';
+import { ProductComponent } from './product/product.component';
+import { ApiService } from './api.service';
+import { ProductListComponent } from './product-list/product-list.component';
 import { FeaturedBrandsComponent } from './featured-brands/featured-brands.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
@@ -17,8 +22,13 @@ import { FooterComponent } from './footer/footer.component';
   declarations: [
     AppComponent,
     NavbarComponent,
+    
     LoginComponent,
+    
+    BannerComponent,
     CartComponent,
+    ProductComponent,
+    ProductListComponent,
     FeaturedBrandsComponent,
     NewArrivalsComponent,
     FooterComponent
@@ -26,9 +36,11 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
