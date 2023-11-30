@@ -1,13 +1,44 @@
-.avatar-container
-{
-    position: relative;
-    width: 100%;
-    max-width: 100%;
+.avatar-container {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
 }
-.category-pic1, .category-pic2, .category-pic3, .category-pic4, .category-pic5
-{
-    width:200px;
-    height: 200px;
-    margin-top: 50px;
+
+.category {
+    position: relative;
+    max-width: 100%;
+    text-align: center; 
+    overflow: hidden; 
+    position: relative; 
+}
+
+.category-pic1{
+    width: 100%;
+    height: 220px; 
+    margin-top: 40px;
+}
+
+.innerText1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px; 
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+}
+
+.p {
+    margin-right: 5px; /* Add space between text and arrow */
+    color: white; /* Text color */
+}
+
+.arrow-icon {
+    width: 16px; 
+    height: 16px; 
+    
+    margin-left: 5px; 
+    fill: white; 
 }
