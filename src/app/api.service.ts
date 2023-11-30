@@ -8,13 +8,13 @@ import { Product } from './Product';
 })
 export class ApiService {
 
-  // private productsUrl = 'https://fakestoreapi.com/products';
+  private productsUrl = 'https://fakestoreapi.com/products';
 
-  // constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   
 
-  // getProducts(): Observable<Product[]> {
-  //   return this.http.get<Product[]>(this.productsUrl)
-  // }
+  getProducts() : Observable<Product[]> {
+    return this.http.get<Product[]>(this.productsUrl)
+  }
 }
