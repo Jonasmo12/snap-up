@@ -1,0 +1,28 @@
+
+.cards{
+    justify-content: space-between;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+.cards .card1{
+    background: rgb(183, 176, 176) url("../../assets/featured-brands/yellow.jpeg");
+    
+    background-size: cover;
+}
+
+.cards .card2{
+    background: url("../../assets/featured-brands/TSHEPO-WTP-scaled.webp");
+    background-size: cover;
+}
+
+.cards .card3{
+    background: url("../../assets/featured-brands/jewellery.webp")black;
+    background-size: cover;
+    
+}
+
+.cards .card4{
+    background: url("../../assets/featured-brands/camera.webp");
+    background-size: cover;
+}

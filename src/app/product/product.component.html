@@ -1,7 +1,11 @@
 <div class="container">
     <div class="row">
-        <div class="col-lg-3">
-            {{getProduct()}}
+        <div class="col-lg-6" *ngFor="let product of products$ | async">
+            {{product.id}}
+            {{product.title}}
         </div>
     </div>
 </div>
+
+
+

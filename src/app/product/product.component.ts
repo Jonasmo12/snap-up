@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { CartService } from '../cart.service';
+import { Component, Input, OnInit } from '@angular/core';
 import { Product } from '../Product';
-import { HttpClient } from '@angular/common/http'
+import { ApiService } from '../api.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-product',
@@ -10,22 +10,16 @@ import { HttpClient } from '@angular/common/http'
 })
 export class ProductComponent implements OnInit {
 
-  url = "";
-  constructor(private cartService: CartService, private http: HttpClient) {}
+
+  public products$!: Observable<Product[]>;
+
+  constructor(private apiService: ApiService) {}
+
 
   ngOnInit(): void {
-      
+      this.products$ = this.apiService.getProducts();
   }
 
-  addToCart(product: Product) {
-    this.cartService.addToCart(product);
-    window.alert("You have added product to cart!!");
-  }
-
-  getProduct() {
-    return this.http.get(this.url)
-  }
-  
 
 }
 

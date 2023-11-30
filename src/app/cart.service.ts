@@ -10,16 +10,22 @@ export class CartService {
 
   constructor() { }
 
-  addToCart(product: Product) {
-    this.products.push(product)
+  items: any[] = [];
+
+  addToCart(product: any) {
+    this.items.push(product);
   }
 
-  getProductsInTheCart() {
-    return this.products;
+  getItems() {
+    return this.items;
+  }
+
+  removeItem(index: number) {
+    this.items.splice(index, 1);
   }
 
   clearCart() {
-    this.products = [];
-    return this.products;
+    this.items = [];
+    return this.items;
   }
 }
