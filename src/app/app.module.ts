@@ -28,14 +28,12 @@ import { CategoriesComponent } from './categories/categories.component';
     CartComponent,
     ProductComponent,
     CategoriesComponent,
-    ProductListComponent
-=======
+    ProductListComponent,
     LoginComponent,
     CartComponent,
     BannerComponent,
     CartComponent,
     ProductComponent
->>>>>>> da5b893 (app.module.ts and banner.html conflicts)
   ],
   imports: [
     BrowserModule,
