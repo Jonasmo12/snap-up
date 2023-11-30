@@ -16,6 +16,7 @@ import { ProductListComponent } from './product-list/product-list.component';
   declarations: [
     AppComponent,
     NavbarComponent,
+<<<<<<< HEAD
     NavbarComponent,
     LoginComponent,
     CartComponent,
@@ -23,6 +24,12 @@ import { ProductListComponent } from './product-list/product-list.component';
     CartComponent,
     ProductComponent,
     ProductListComponent
+=======
+    LoginComponent,
+    CartComponent,
+    CartComponent,
+    ProductComponent
+>>>>>>> 0c0bfb4 (app.module.ts file conflicts)
   ],
   imports: [
     BrowserModule,
