@@ -22,17 +22,14 @@ import { CategoriesComponent } from './categories/categories.component';
   declarations: [
     AppComponent,
     NavbarComponent,
-    
+    NavbarComponent,
     LoginComponent,
     
     BannerComponent,
     CartComponent,
     ProductComponent,
-    ProductListComponent,
-    FeaturedBrandsComponent,
-    NewArrivalsComponent,
-    FooterComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
