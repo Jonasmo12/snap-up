@@ -30,6 +30,16 @@ import { CategoriesComponent } from './categories/categories.component';
     ProductComponent,
     CategoriesComponent,
     ProductListComponent
+<<<<<<< HEAD
+=======
+=======
+    LoginComponent,
+    CartComponent,
+    BannerComponent,
+    CartComponent,
+    ProductComponent
+>>>>>>> 0c0bfb4 (app.module.ts file conflicts)
+>>>>>>> da5b893 (app.module.ts and banner.html conflicts)
   ],
   imports: [
     BrowserModule,
