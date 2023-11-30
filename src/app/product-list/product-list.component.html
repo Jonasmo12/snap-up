@@ -1,8 +1,20 @@
-<div class="container">
-    <div class="row">
-        <div class="col-lg-3" *ngFor="let product of products$ | async">
-            {{product.id}}
-            {{product.title}}
+<div class="cards d-flex">
+    <div *ngFor="let us of [1,2,3,4]" class="card" style="width: 18rem;">
+        <img class="card-img-top" src="../../assets/new-arrival/black-shirt.webp" alt="Card image cap">
+        <div class="card-body">
+            <h6>
+                <p>Black tee</p>
+            </h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <div class="d-flex" style="justify-content: space-between;">
+                <div>
+                    R199.99
+                </div>
+                <div>
+                    <img src="../../assets/cart.png" alt="">
+                </div>
+            </div>
         </div>
     </div>
 </div>
