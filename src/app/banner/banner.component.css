@@ -1,16 +1,15 @@
 .banner-container {
     position: relative;
     width: 100%;
-    max-width: 100%; /* Ensure the container spans the full width */
+    max-width: 100%; 
 }
 
 .banner-pic {
     width: 100%;
-    height: 610px;
+    height: 510px;
     flex-shrink: 0;
     padding-right: 3rem;
     padding-left: 3rem;
-    /* Ensure the image covers the entire space */
     object-fit: cover;
 }
 

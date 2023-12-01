@@ -15,36 +15,37 @@ import { FormsModule } from '@angular/forms';
 import { ApiService } from './api.service';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FeaturedBrandsComponent } from './featured-brands/featured-brands.component';
-//import { NgModule } from '@ng-bootstrap/ng-bootstrap';
 import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { CategoriesComponent } from './categories/categories.component';
+import { CartService } from './cart.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    
+    NavbarComponent,
     LoginComponent,
-    
     BannerComponent,
     CartComponent,
     ProductComponent,
+    CategoriesComponent,
     ProductListComponent,
-    FeaturedBrandsComponent,
-    NewArrivalsComponent,
-    FooterComponent
+    LoginComponent,
+    CartComponent,
+    BannerComponent,
+    CartComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    NgModule,
     HttpClientModule,
     
   ],
-  providers: [ApiService],
+  providers: [ApiService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
