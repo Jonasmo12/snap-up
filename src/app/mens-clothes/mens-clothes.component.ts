@@ -5,21 +5,20 @@ import { Product } from '../Product';
 import { CartService } from '../cart.service';
 
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: 'app-mens-clothes',
+  templateUrl: './mens-clothes.component.html',
+  styleUrls: ['./mens-clothes.component.css']
 })
-export class ProductListComponent implements OnInit {
+export class MensClothesComponent implements OnInit {
 
 
-  page = 4;
-  public products$!: Observable<Product[]>;
+  public men$!: Observable<Product[]>;
 
   constructor(private apiService: ApiService, private cartService:CartService) {}
 
 
   ngOnInit(): void {
-      this.products$ = this.apiService.getProducts();
+      this.men$ = this.apiService.getMen();
   }
 
   addToCart(product: any) {

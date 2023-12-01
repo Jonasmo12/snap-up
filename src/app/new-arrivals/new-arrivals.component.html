@@ -6,10 +6,11 @@
 <!-- second list -->
 
 <div class="cards d-flex pt-5">
-    <div  class="produc" style="width: 15rem;">
+    <div  class="produc" style="width: 12rem;">
         <img class="card-img-top" [src]="products.image" alt="Card image cap">
         <div class="card-body">
           <p class="card-text">{{products.title}}</p>
+          <p class="card-text"><b>{{products.category}}</b></p>
           <div class="d-flex" style="justify-content: space-between;">
             <div>
                 {{products.price}}
@@ -19,18 +20,16 @@
             </div>
             
         </div>
-        <div class="pt-2">
-          
-          <button type="button" class="btn btn-info w-100 " (click)="addToCart(products)">Add to Cart</button>
-        </div>
         </div>
       </div>
     
 
-      <div  class="produc" style="width: 15rem; height: 5rem;">
+      <div  class="produc" style="width: 13rem;">
         <img class="card-img-top" [src]="product2.image" alt="Card image cap">
         <div class="card-body">
           <p class="card-text">{{product2.title}}</p>
+          <p class="card-text"><b>{{product2.category}}</b></p>
+
           <div class="d-flex" style="justify-content: space-between;">
             <div>
                 {{product2.price}}
@@ -43,10 +42,11 @@
       </div>
 
 
-      <div  class="produc" style="width: 15rem;">
+      <div  class="produc" style="width: 17rem;">
         <img class="card-img-top" [src]="product3.image" alt="Card image cap">
         <div class="card-body">
           <p class="card-text">{{product3.title}}</p>
+          <p class="card-text"><b>{{product3.category}}</b></p>
           <div class="d-flex" style="justify-content: space-between;">
             <div>
                 {{product3.price}}
@@ -63,12 +63,15 @@
         <img class="card-img-top" [src]="product4.image" alt="Card image cap">
         <div class="card-body">
           <p class="card-text">{{product4.title}}</p>
+          <p class="card-text"><b>{{product4.category}}</b></p>
           <div class="d-flex" style="justify-content: space-between;">
             <div>
                 {{product4.price}}
             </div>
             
-            
+            <div>
+              <img src="../../assets/cart.png" alt="">
+          </div>
         </div>
         </div>
       </div>
@@ -79,22 +82,4 @@
 
 
 
-    <div class="cards d-flex">
-      <div *ngFor="let us of [1,2,3,4]" class="card" style="width: 18rem; ">
-          <img class="card-img-top" src="../../assets/new-arrival/black-shirt.webp" alt="Card image cap">
-          <div class="card-body">
-              <h6><p>Black tee</p></h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <div class="d-flex" style="justify-content: space-between;">
-              <div>
-                  R199.99
-              </div>
-              <div>
-                  <img src="../../assets/cart.png" alt="">
-              </div>
-          </div>
-          </div>
-        </div>
-      
-        
-      </div>
+    
