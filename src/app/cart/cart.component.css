@@ -4,3 +4,7 @@ img{
     padding: 6px;
     margin-right: 30px;
 }
+
+#form1 {
+    max-width: max-content;
+}
