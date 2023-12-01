@@ -8,7 +8,7 @@ import { CartService } from '../cart.service';
 })
 export class CartComponent implements OnInit {
   items: any[] = [];
-  storeddata=JSON.parse(localStorage.getItem("products") || "")
+  storeddata=JSON.parse(localStorage.getItem("products") || "[]")
   alldata:any;
 
   constructor(private cartService: CartService) {}
