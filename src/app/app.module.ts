@@ -16,6 +16,7 @@ import { FeaturedBrandsComponent } from './featured-brands/featured-brands.compo
 import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { CartService } from './cart.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { CategoriesComponent } from './categories/categories.component';
     HttpClientModule,
     
   ],
-  providers: [ApiService],
+  providers: [ApiService, CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
