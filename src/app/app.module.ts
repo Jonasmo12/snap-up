@@ -50,7 +50,6 @@ import { WomenComponent } from './women/women.component';
     FooterComponent,
     FeaturedBrandsComponent,
     NewArrivalsComponent,
-    WomenComponent
   ],
   imports: [
     BrowserModule,
