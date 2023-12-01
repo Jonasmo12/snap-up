@@ -2,7 +2,7 @@
 
 <h2>Shopping Cart</h2>
 
-<div *ngFor="let item of items;let i = index">
+<div *ngFor="let item of storeddata;let i = index">
   {{ item.title }} - R{{ item.price }}
   <button (click)="removeItem(i)">Remove from Cart</button>
 </div>
