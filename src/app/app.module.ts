@@ -23,7 +23,6 @@ import { JeweleryComponent } from './jewelery/jewelery.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
 import { MensClothesComponent } from './mens-clothes/mens-clothes.component';
 import { WomensClothesComponent } from './womens-clothes/womens-clothes.component';
-import { WomenComponent } from './women/women.component';
 
 
 @NgModule({

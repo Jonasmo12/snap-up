@@ -6,26 +6,45 @@ import { Product } from './Product';
 })
 export class CartService {
 
-  products: Product[] = [];
-
   constructor() { }
 
-  items: any[] = [];
+  items : any[] = [];
 
-  addToCart(product: any) {
-    this.items.push(product);
+  addToCart(addItem: any) {
+    this.items.push(addItem);
+    
+    this.saveCart();
   }
 
   getItems() {
     return this.items;
   }
 
-  removeItem(index: number) {
-    this.items.splice(index, 1);
+  loadCart() : void {
+    this.items =JSON.parse(localStorage.getItem("cart_products") || "[]")
+  }
+ 
+  saveCart() : void {
+    localStorage.setItem('cart_products', JSON.stringify(this.items));
   }
 
-  clearCart() {
+  removeItem(item: any) {
+    let index = this.items.findIndex(o => o.id === item.id)
+    //this.items.splice(index, 1);
+    //localStorage.setItem('products', JSON.stringify(this.items));
+
+    if (index > -1 ) {
+      this.items.splice(index, 1);
+      this.saveCart()
+    }
+  }
+
+  itemInTheCart(item: any): any {
+    return this.items.findIndex(o => o.id === item.id > -1);
+  }
+
+  clearCart(items: any) {
     this.items = [];
-    return this.items;
+    localStorage.removeItem("cart_products")
   }
 }

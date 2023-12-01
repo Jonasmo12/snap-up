@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
 import { Observable } from 'rxjs';
 import { Product } from '../Product';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-jewelery',
@@ -12,11 +13,16 @@ export class JeweleryComponent {
 
   public jewelery$!: Observable<Product[]>;
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private cartService: CartService) {}
 
 
   ngOnInit(): void {
       this.jewelery$ = this.apiService.getJewelery();
+  }
+
+  addToCart(product: any) {
+    this.cartService.addToCart(product);
+    console.log('Product added to cart:', product);
   }
 
 }
