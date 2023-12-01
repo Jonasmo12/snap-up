@@ -52,11 +52,11 @@ nav .list li input{
     list-style: none;
 }
 
-.nav-link {
+.nav-link, .logo-link {
     text-decoration: none;
 }
 
-.nav-link:hover {
+.nav-link:hover, logo-link:hover {
     border-bottom: 2px solid #000;
     max-width: max-content;
     transition: .5s;
