@@ -1,11 +1,12 @@
 <div class="container formContainer">
 <div class="row justify-content-center">
     <div class="" style="padding-top: 100px;">
-        <form class="rounded shadow-lg p-3 mb-5 bg-white rounded Larger shadow" style="padding: 200px;"> 
+        <form form  class="rounded shadow-lg p-3 mb-5 bg-white rounded Larger shadow" style="padding: 20px;"> 
             <div class="form-group row">
-                <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">USERNAME:</label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control form-control-lg"  placeholder="enter your username">
+                <label for="username" class="col-sm-2 col-form-label col-form-label-lg">USERNAME:</label>
+                <div class="col-sm-10 ">
+                  <input [(ngModel)]="username" name="username" type="email" class="form-control form-control-lg bg-body-secondary" placeholder="enter your username">
+                  
                 </div>
             </div>
             <br>
@@ -13,12 +14,12 @@
             <div class="form-group row">
                 <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">PASSWORD:</label>
                 <div class="col-sm-10">
-                  <input type="password" class="form-control form-control-lg"  placeholder="enter your password">
+                  <input [(ngModel)]="password" name="password" type="password" class="form-control form-control-lg form-control bg-body-secondary"  placeholder="enter your password">
                 </div>
             </div>
             <br>
                        <div class="col-md-12 text-center">
-                       <button type="button" class="btn btn-primary btn-lg w-50">Log In</button>
+                       <button type="button" class="btn btn-primary btn-lg w-50" (click)="submit()">Log In</button>
                         </div>
                        <p class="text-center">OR</p> 
                        <a href="" class="text-center text-primary">
@@ -30,3 +31,10 @@
     </div>
 </div>
 </div>
+
+
+
+
+
+
+

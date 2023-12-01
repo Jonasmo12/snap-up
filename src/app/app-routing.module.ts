@@ -2,9 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { ProductComponent } from './product/product.component';
-import { AppComponent } from './app.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { JeweleryComponent } from './jewelery/jewelery.component';
@@ -17,6 +15,7 @@ const routes: Routes = [
   {path: 'cart', component: CartComponent},
   {path: 'product', component: ProductComponent},
   { path: 'products', component: ProductListComponent},
+  { path: 'products/:category', component: ProductComponent },
   {path:'jewelery', component:JeweleryComponent},
   {path:'electronics',component:ElectronicsComponent},
   {path: 'men',component:MensClothesComponent}

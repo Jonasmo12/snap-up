@@ -49,3 +49,19 @@
 .sort-filter-p, .categories-p, .brands-p {
     font-size: 12px;
 }
+
+
+.default {
+    color: lightgray;
+    padding-left: 20px;
+    font-size: 10px;
+}
+
+.category-link, .sort-link {
+    text-decoration: none;
+}
+
+.category-link:hover, .sort-link:hover {
+    border-bottom: 2px #000 solid;
+    transition: .5s;
+}
