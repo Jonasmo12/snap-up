@@ -2,7 +2,9 @@
     <div class="logo" >
         <ul class="d-flex">
             <li>
-                <img src="../../assets/ham menu.png" alt="">
+                <a data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">  
+                    <img width="50" height="50" src="../../assets/ham menu.png" alt="">
+                </a>
             </li>
             <li>
                 <h2 class=><b>Snap-up</b></h2>
@@ -28,3 +30,28 @@
         </ul>
     </div>
 </nav>
+
+
+
+  <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    Button with data-bs-target
+  </button> -->
+  
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h4 class="offcanvas-title" id="offcanvasExampleLabel">SnapUp</h4>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <ul class="menu">
+            <li><a class="nav-link" routerLink="">Home</a></li>
+            <li><a class="nav-link" routerLink="/products">Shop Now</a></li>
+            <li><a class="nav-link" routerLink="/men">Mens Fashion</a></li>
+            <li><a class="nav-link" routerLink="/electronics">Electronics</a></li>
+            <li><a class="nav-link" routerLink="/jewelerry">Jewellery</a></li>
+            <li><a class="nav-link" routerLink="/women">Womens Fashion</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
