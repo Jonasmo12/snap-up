@@ -30,9 +30,6 @@ export class CartService {
 
   removeItem(item: any) {
     let index = this.items.findIndex(o => o.id === item.id)
-    //this.items.splice(index, 1);
-    //localStorage.setItem('products', JSON.stringify(this.items));
-
     if (index > -1 ) {
       this.items.splice(index, 1);
       this.saveCart()

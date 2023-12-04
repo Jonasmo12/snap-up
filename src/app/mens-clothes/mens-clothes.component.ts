@@ -23,6 +23,7 @@ export class MensClothesComponent implements OnInit {
 
   addToCart(product: any) {
     this.cartService.addToCart(product);
+    alert('Item added to Cart');
     console.log('Product added to cart:', product);
   }
 }

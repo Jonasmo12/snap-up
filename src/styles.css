@@ -56,3 +56,29 @@ body, html {
     border-bottom: 2px #000 solid;
     transition: .5s;
 }
+
+.hide
+{
+    display: none;
+
+}
+
+@media screen and (max-width: 600px) {
+    li.search
+    {
+        display: none;
+    }
+
+    .hamburger-menu {
+        width: 20px;
+        height: 20px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .product-arrival {
+        margin-bottom: 20px;
+    }
+}

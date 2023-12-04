@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 import { Product } from '../Product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -12,8 +13,13 @@ export class CartComponent implements OnInit {
   //storeddata=JSON.parse(localStorage.getItem("products") || "[]")
   //alldata:any;
 
+  //user= localStorage.getItem('token');
+  
+
+
   constructor(
-    private cartService: CartService
+    private cartService: CartService,
+    private router:Router
     ) {
 
     }
@@ -59,4 +65,13 @@ export class CartComponent implements OnInit {
   //     console.log(i++)
   //   }
   // }
+
+  checkout(){
+    console.log(localStorage.getItem('token'))
+    if(localStorage.getItem('token') === null ){
+      this.router.navigate(['/login'])
+    } else{
+      this.router.navigate(['/'])
+    }
+  }
 }
