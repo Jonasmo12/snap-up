@@ -8,6 +8,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { JeweleryComponent } from './jewelery/jewelery.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
 import { MensClothesComponent } from './mens-clothes/mens-clothes.component';
+import { WomensClothesComponent } from './womens-clothes/womens-clothes.component';
 
 const routes: Routes = [
   {path: '', component: BannerComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'products/:category', component: ProductComponent },
   {path:'jewelery', component:JeweleryComponent},
   {path:'electronics',component:ElectronicsComponent},
-  {path: 'men',component:MensClothesComponent}
+  {path: 'men',component:MensClothesComponent},
+  {path: 'women',component: WomensClothesComponent}
   // {path: '', redirectTo: '', pathMatch: 'full' },
 ];
 

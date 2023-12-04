@@ -8,3 +8,9 @@ img{
 #form1 {
     max-width: max-content;
 }
+
+
+.description-p {
+    font-size: 10px;
+    color: gray;
+}

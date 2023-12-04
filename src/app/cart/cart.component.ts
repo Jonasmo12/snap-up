@@ -1,5 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
+import { Product } from '../Product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -7,24 +9,69 @@ import { CartService } from '../cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  items: any[] = [];
-  storeddata=JSON.parse(localStorage.getItem("products") || "[]")
-  alldata:any;
+  items: Product[] = [];
+  //storeddata=JSON.parse(localStorage.getItem("products") || "[]")
+  //alldata:any;
 
-  constructor(private cartService: CartService) {}
-
+  //user= localStorage.getItem('token');
   
 
-  ngOnInit() {
-    this.items = this.cartService.getItems();
-    console.log('cfbgb',this.storeddata);
-    
-   
-   console.log('data',this.alldata);
+
+  constructor(
+    private cartService: CartService,
+    private router:Router
+    ) {
+
+    }
+
+    getCartTotal() {
+      return this.items.reduce(
+        (sum, x) => ({
+          quantity: 1,
+          price: sum.price + x.quantity * x.price
+        }),
+        { quantity: 1, price: 0}
+      ).price
+    }
+
+  removeFromCart(item: any) {
+    this.cartService.removeItem(item)
   }
 
-  removeItem(index: number) {
-    
-    this.cartService.removeItem(index);
+  clearCart(items: any) {
+    this.cartService.clearCart(items);
+    this.items = [...this.cartService.getItems()]
+  }
+
+  addToCart(item: any) {
+    if (!this.cartService.itemInTheCart(item)) {
+      item.quantity = 1;
+      this.cartService.clearCart(item);
+      this.items = [...this.cartService.getItems()];
+    }
+  }
+
+  // removeItem(item: any[]) {
+  //   this.cartService.removeItem(item);
+  // }
+
+  ngOnInit() {
+    this.cartService.loadCart();
+    this.items = this.cartService.getItems();
+  }
+
+  // same() {
+  //   for(let i = 0; i < this.cartService.getItems.length; i++) {
+  //     console.log(i++)
+  //   }
+  // }
+
+  checkout(){
+    console.log(localStorage.getItem('token'))
+    if(localStorage.getItem('token') === null ){
+      this.router.navigate(['/login'])
+    } else{
+      this.router.navigate(['/'])
+    }
   }
 }

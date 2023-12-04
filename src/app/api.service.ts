@@ -30,4 +30,8 @@ export class ApiService {
   getMen(): Observable<Product[]> {
     return this.http.get<Product[]>(this.productsUrl + `/category/men's%20clothing`)
   }
+
+  getWomen(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.productsUrl + `/category/women's%20clothing`)
+  }
 }

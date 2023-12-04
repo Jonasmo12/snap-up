@@ -48,7 +48,7 @@ import { WomensClothesComponent } from './womens-clothes/womens-clothes.componen
     WomensClothesComponent,
     FooterComponent,
     FeaturedBrandsComponent,
-    NewArrivalsComponent
+    NewArrivalsComponent,
   ],
   imports: [
     BrowserModule,
