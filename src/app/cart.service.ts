@@ -5,43 +5,41 @@ import { Product } from './models/product';
   providedIn: 'root'
 })
 export class CartService {
-
-  //private product: Product;
+  private cartItems: Product[] = [];
 
   constructor() { }
 
-  private items: any[] = [];
-
   addToCart(product: Product ) {
-    this.items.push(product);
+    this.cartItems.push(product);
   }
 
-  getItems() {
-    return this.items;
+  getItems(): Product[] {
+    return this.cartItems;
   }
 
   loadCart() : void {
-    this.items =JSON.parse(localStorage.getItem("cart_products") || "[]")
+    this.cartItems =JSON.parse(localStorage.getItem("cart_products") || "[]")
   }
  
   saveCart() : void {
-    localStorage.setItem('cart_products', JSON.stringify(this.items));
+    localStorage.setItem('cart_products', JSON.stringify(this.cartItems));
   }
 
   removeItem(item: any) {
-    let index = this.items.findIndex(o => o.id === item.id)
+    let index = this.cartItems.findIndex(o => o.id === item.id)
     if (index > -1 ) {
-      this.items.splice(index, 1);
+      this.cartItems.splice(index, 1);
       this.saveCart()
     }
   }
 
-  itemInTheCart(item: any): any {
-    return this.items.findIndex(o => o.id === item.id > -1);
+  itemInTheCart(item: Product): any {
+    // return this.items.findIndex(o => o.id === item.id > -1);
+    return this.cartItems.find(each => each.id === item.id === true)
   }
 
   clearCart(items: any) {
-    this.items = [];
+    this.cartItems = [];
     localStorage.removeItem("cart_products")
   }
 }

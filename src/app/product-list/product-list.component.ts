@@ -10,21 +10,28 @@ import { CartService } from '../cart.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-
-
-  page = 4;
   public products$!: Observable<Product[]>;
 
-  constructor(private apiService: ApiService, private cartService:CartService) {}
+  constructor(
+    private apiService: ApiService,
+    private cartService: CartService
+  ) { }
 
 
   ngOnInit(): void {
-      this.products$ = this.apiService.getProducts();
+    this.products$ = this.apiService.getProducts();
   }
 
-  addToCart(product: any) {
-    this.cartService.addToCart(product);
-    alert('Item added to Cart');
-    console.log('Product added to cart:', product);
+  addToCart(product: Product) {
+    // this.cartService.addToCart(product);
+    // alert('Item added to Cart');
+    // console.log('Product added to cart:', product);
+    if (this.cartService.itemInTheCart(product)) {
+      console.log("Incrementing: " + product + " quantity");
+      product.quantity += 1;
+    } else {
+      console.log("adding product: " + product + " to cart");
+      this.cartService.addToCart(product)
+    }
   }
 }

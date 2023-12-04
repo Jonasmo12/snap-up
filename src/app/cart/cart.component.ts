@@ -1,4 +1,4 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CartService } from '../cart.service';
 import { Product } from '../models/product';
 import { Router } from '@angular/router';
@@ -10,29 +10,21 @@ import { Router } from '@angular/router';
 })
 export class CartComponent implements OnInit {
   items: Product[] = [];
-  //storeddata=JSON.parse(localStorage.getItem("products") || "[]")
-  //alldata:any;
-
-  //user= localStorage.getItem('token');
-  
-
 
   constructor(
     private cartService: CartService,
-    private router:Router
-    ) {
+    private router: Router
+  ) { }
 
-    }
-
-    getCartTotal() {
-      return this.items.reduce(
-        (sum, x) => ({
-          quantity: 1,
-          price: sum.price + x.quantity * x.price
-        }),
-        { quantity: 1, price: 0}
-      ).price
-    }
+  getCartTotal() {
+    return this.items.reduce(
+      (sum, x) => ({
+        quantity: 1,
+        price: sum.price + x.quantity * x.price
+      }),
+      { quantity: 1, price: 0 }
+    ).price
+  }
 
   removeFromCart(item: any) {
     this.cartService.removeItem(item)
@@ -66,11 +58,11 @@ export class CartComponent implements OnInit {
   //   }
   // }
 
-  checkout(){
+  checkout() {
     console.log(localStorage.getItem('token'))
-    if(localStorage.getItem('token') === null ){
+    if (localStorage.getItem('token') === null) {
       this.router.navigate(['/login'])
-    } else{
+    } else {
       this.router.navigate(['/'])
     }
   }
