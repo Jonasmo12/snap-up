@@ -11,6 +11,7 @@ export class CartService {
 
   addToCart(product: Product ) {
     this.cartItems.push(product);
+    this.saveCart()
   }
 
   getItems(): Product[] {

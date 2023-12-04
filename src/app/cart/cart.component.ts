@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
 
   constructor(
     private cartService: CartService,
-    private router: Router
+    private router: Router,
   ) { }
 
   getCartTotal() {
