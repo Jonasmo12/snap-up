@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Product } from '../Product';
+import { Product } from '../models/product';
 import { ApiService } from '../api.service';
 import { Observable } from 'rxjs';
 

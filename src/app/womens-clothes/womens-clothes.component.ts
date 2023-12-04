@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService  } from '../api.service';
 import { CartService } from '../cart.service';
 import { Observable } from 'rxjs';
-import { Product } from '../Product';
+import { Product } from '../models/product';
 @Component({
   selector: 'app-womens-clothes',
   templateUrl: './womens-clothes.component.html',
@@ -12,7 +12,10 @@ export class WomensClothesComponent implements OnInit {
 
   public women$!: Observable<Product[]>;
 
-  constructor(private apiService: ApiService, private cartService:CartService) {}
+  constructor(
+    private apiService: ApiService, 
+    private cartService: CartService
+    ) {}
 
 
   ngOnInit(): void {
