@@ -5,7 +5,7 @@
 }
 
 .bg-products {
-    background: url("../../assets/electronics.jpg");
+    /* background: url("../../assets/electronics.jpg"); */
     background-size: cover;
     padding-top: 300px;
     padding-bottom: 50px;

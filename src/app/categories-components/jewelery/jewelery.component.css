@@ -5,7 +5,7 @@
 }
 
 .bg-products {
-    background: url("../../assets/jewels.jpeg");
+    /* background: url("../../assets/jewels.jpeg"); */
     background-size: cover;
     padding-top: 300px;
     padding-bottom: 50px;
