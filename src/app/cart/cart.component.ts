@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
     private router: Router,
   ) { }
 
-  getCartTotal() {
+  getCartTotal(): number {
     console.log("Items in the Cart: ", this.items)
     return this.items.reduce(
       (sum, x) => ({
