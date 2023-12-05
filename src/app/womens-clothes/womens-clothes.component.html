@@ -25,7 +25,7 @@
 
         <div class="col-lg-8">
             <div class="row">
-                <div class="col-lg-3 product-card" *ngFor="let product of women$ | async">
+                <div class="col-lg-3 product-card" *ngFor="let product of women$ | async; index as i">
                     <img class="product-img" width="200px" height="200"
                         src="{{product.image}}"
                         alt="">
@@ -51,7 +51,7 @@
                             </svg> -->
                         </div>
                     </div>
-                    <button type="button" class="btn btn-info w-100 " (click)="addToCart(product)">Add to Cart</button>
+                    <button type="button" class="btn btn-info w-100 " (click)="addToCart(product, i)">Add to Cart</button>
 
                 </div>
                 <!-- <div class="col-lg-3">2</div>

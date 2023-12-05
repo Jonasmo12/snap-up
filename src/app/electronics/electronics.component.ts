@@ -19,8 +19,8 @@ productList:any[]=[];
   ngOnInit(): void {
       this.electronics$ = this.apiService.getElectronics();
   }
-  addToCart(product: any) {
-    this.cartService.addToCart(product);
+  addToCart(product: any, i: any) {
+    this.cartService.addToCart(product, i);
     this.productList.push(product);
     localStorage.setItem('products', JSON.stringify(this.productList));
     console.log('Product added to cart:', product);

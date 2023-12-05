@@ -9,9 +9,16 @@ export class CartService {
 
   constructor() { }
 
-  addToCart(product: Product ) {
-    this.cartItems.push(product);
-    this.saveCart()
+  addToCart(product: Product, i: any ) {
+    // this.cartItems.push(product);
+    // this.saveCart()
+    if (this.itemInTheCart(product)) {
+      this.cartItems[i].quantity++;
+      this.saveCart()
+    } else {
+      this.cartItems.push(product);
+      this.saveCart()
+    }
   }
 
   getItems(): Product[] {

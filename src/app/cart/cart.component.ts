@@ -16,7 +16,10 @@ export class CartComponent implements OnInit {
     private router: Router,
   ) { }
 
+  
+
   getCartTotal() {
+    console.log("Items in the Cart: ", this.items)
     return this.items.reduce(
       (sum, x) => ({
         quantity: 1,
@@ -35,13 +38,13 @@ export class CartComponent implements OnInit {
     this.items = [...this.cartService.getItems()]
   }
 
-  addToCart(item: any) {
-    if (!this.cartService.itemInTheCart(item)) {
-      item.quantity = 1;
-      this.cartService.clearCart(item);
-      this.items = [...this.cartService.getItems()];
-    }
-  }
+  // addToCart(item: any) {
+  //   if (!this.cartService.itemInTheCart(item)) {
+  //     item.quantity = 1;
+  //     this.cartService.clearCart(item);
+  //     this.items = [...this.cartService.getItems()];
+  //   }
+  // }
 
   // removeItem(item: any[]) {
   //   this.cartService.removeItem(item);

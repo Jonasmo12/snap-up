@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable, of } from 'rxjs';
+import { forkJoin, map, Observable, of, switchMap } from 'rxjs';
 import { Product } from './models/product';
 
 @Injectable({
@@ -8,15 +8,21 @@ import { Product } from './models/product';
 })
 export class ApiService {
 
+  private products: Product[] = [];
+
   private productsUrl = 'https://fakestoreapi.com/products';
 
+  
 
   constructor(private http: HttpClient) { }
 
   
 
   getProducts() : Observable<Product[]> {
-    return this.http.get<Product[]>(this.productsUrl)
+    return this.http.get<Product[]>(this.productsUrl).pipe(
+      map(products => {return products.map(product => ({...product, quantity: 1}))})
+    
+    )
   }
 
   getJewelery(): Observable<Product[]> {

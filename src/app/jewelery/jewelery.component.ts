@@ -20,8 +20,8 @@ export class JeweleryComponent {
       this.jewelery$ = this.apiService.getJewelery();
   }
 
-  addToCart(product: any) {
-    this.cartService.addToCart(product);
+  addToCart(product: any, i:any) {
+    this.cartService.addToCart(product, i);
     alert('Item added to Cart');
     console.log('Product added to cart:', product);
   }

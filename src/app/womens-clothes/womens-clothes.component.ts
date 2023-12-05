@@ -22,8 +22,8 @@ export class WomensClothesComponent implements OnInit {
       this.women$ = this.apiService.getWomen();
   }
 
-  addToCart(product: any) {
-    this.cartService.addToCart(product);
+  addToCart(product: any, i: any) {
+    this.cartService.addToCart(product, i);
     alert('Item added to Cart');
     console.log('Product added to cart:', product);
   }
