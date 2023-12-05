@@ -1,4 +1,4 @@
-.cards{
+.cards {
     padding-left: 6rem;
     padding-right: 6rem;
     justify-content: space-between;
@@ -46,6 +46,8 @@
 
 }
 
-.sort-filter-p, .categories-p, .brands-p {
+.sort-filter-p,
+.categories-p,
+.brands-p {
     font-size: 12px;
 }

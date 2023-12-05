@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import { ApiService } from '../../services/api/api.service';
 import { Observable } from 'rxjs';
-import { Product } from '../models/product';
-import { CartService } from '../cart.service';
+import { Product } from '../../models/product';
+import { CartService } from '../../services/cart/cart.service';
 
 @Component({
   selector: 'app-electronics',
@@ -13,11 +13,11 @@ export class ElectronicsComponent {
 
   public electronics$!: Observable<Product[]>;
 
-  constructor(private apiService: ApiService, private cartService: CartService) {}
-productList:any[]=[];
+  constructor(private apiService: ApiService, private cartService: CartService) { }
+  productList: any[] = [];
 
   ngOnInit(): void {
-      this.electronics$ = this.apiService.getElectronics();
+    this.electronics$ = this.apiService.getElectronics();
   }
   addToCart(product: any, i: any) {
     this.cartService.addToCart(product, i);

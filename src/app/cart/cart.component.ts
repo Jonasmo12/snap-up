@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from '../cart.service';
+import { CartService } from '../services/cart/cart.service';
 import { Product } from '../models/product';
 import { Router } from '@angular/router';
 
@@ -15,8 +15,6 @@ export class CartComponent implements OnInit {
     private cartService: CartService,
     private router: Router,
   ) { }
-
-  
 
   getCartTotal() {
     console.log("Items in the Cart: ", this.items)
@@ -38,28 +36,11 @@ export class CartComponent implements OnInit {
     this.items = [...this.cartService.getItems()]
   }
 
-  // addToCart(item: any) {
-  //   if (!this.cartService.itemInTheCart(item)) {
-  //     item.quantity = 1;
-  //     this.cartService.clearCart(item);
-  //     this.items = [...this.cartService.getItems()];
-  //   }
-  // }
-
-  // removeItem(item: any[]) {
-  //   this.cartService.removeItem(item);
-  // }
-
   ngOnInit() {
     this.cartService.loadCart();
     this.items = this.cartService.getItems();
   }
 
-  // same() {
-  //   for(let i = 0; i < this.cartService.getItems.length; i++) {
-  //     console.log(i++)
-  //   }
-  // }
 
   checkout() {
     console.log(localStorage.getItem('token'))
