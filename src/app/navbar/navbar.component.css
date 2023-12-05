@@ -61,3 +61,54 @@ nav .list li input{
     max-width: max-content;
     transition: .5s;
 }
+
+/* Your existing CSS remains unchanged */
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: auto;
+        padding: 1rem; 
+        border-bottom: 1px solid black;
+        overflow-x: hidden; 
+    }
+
+    nav .logo ul {
+        margin-bottom: 1rem; 
+    }
+
+    nav .list {
+        display: none; 
+    }
+
+    .search {
+        display: none; 
+    }
+
+   
+    .ham-menu {
+        display: block; 
+        margin-bottom: 1rem; 
+    }
+
+    .offcanvas {
+        width: 80%; 
+        overflow-x: hidden; 
+    }
+
+    .offcanvas-header {
+        border-bottom: 1px solid black;
+    }
+
+    .offcanvas-title {
+        margin-bottom: 0;
+    }
+
+    .offcanvas-body {
+        padding-top: 1rem;
+    }
+}
+
