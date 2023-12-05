@@ -5,7 +5,7 @@
 }
 
 .bg-products {
-    background: url("https://images.pexels.com/photos/1154861/pexels-photo-1154861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    /*background: url("../../assets/electronics.jpg"); */
     background-size: cover;
     padding-top: 300px;
     padding-bottom: 50px;
@@ -13,6 +13,7 @@
     background-blend-mode: multiply;
     color: #fff;
     margin-bottom: 150px;
+    background-color: gold;
 }
 
 .product-img {

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-6" (click)="handleCategoryClick('tech')">
+        <div class="col-md-6" routerLink="/electronics">
             <div class="category">
                 <img class="category-pic1" src="../../assets/banner-pictures/pexels-anna-shvets-5325585.jpg" alt="sale category picture" style=" object-fit: cover; cursor: pointer;">
                 <div class="innerText1">
@@ -12,7 +12,7 @@
             </div>
         </div>
         
-        <div class="col-md-3" (click)="handleCategoryClick('women')">
+        <div class="col-md-3" routerLink="/women">
             <div class="category">
                 <img class="category-pic1" src="../../assets/banner-pictures/pexels-ron-lach-8386646.jpg" alt="sale category picture" style=" object-fit: cover; cursor: pointer;">
                 <div class="innerText1">
@@ -24,11 +24,11 @@
             </div>
         </div>
 
-        <div class="col-md-3" (click)="handleCategoryClick('beauty')">
+        <div class="col-md-3" routerLink="/jewelery">
             <div class="category">
-                <img class="category-pic1" src="../../assets/banner-pictures/pexels-mart-production-7290198.jpg" alt="sale category picture" style=" object-fit: cover; cursor: pointer;">
+                <img class="category-pic1" src="../../assets/featured-brands/jewellery.webp" alt="sale category picture" style=" object-fit: cover; cursor: pointer;">
                 <div class="innerText1">
-                    <p class="p">Beauty</p>
+                    <p class="p">Jewelery</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right arrow-icon" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                     </svg>
@@ -44,7 +44,7 @@
     <div class="row">
 
         
-        <div class="col-md-3" (click)="handleCategoryClick('men')" >
+        <div class="col-md-3" routerLink="/men" >
             <div class="category">
                 <img class="category-pic1" src="../../assets/banner-pictures/pexels-teddy-tavan-4890733.jpg" alt="sale category picture" style=" object-fit: cover; cursor: pointer;" >
                 <div class="innerText1">
@@ -56,11 +56,11 @@
             </div>
         </div>
 
-        <div class="col-md-9" (click)="handleCategoryClick('kid')">
+        <div class="col-md-9" routerLink="/shop now">
             <div class="category">
                 <img class="category-pic1" src="../../assets/banner-pictures/pexels-artem-podrez-6941451.jpg" alt="sale category picture" style=" object-fit: cover; cursor: pointer;">
                 <div class="innerText1">
-                    <p class="p">Kids</p>
+                    <p class="p" routerLink="/products">Snap All</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right arrow-icon" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                     </svg>

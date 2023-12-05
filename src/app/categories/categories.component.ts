@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { CategoryService } from '../categories.service'; 
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,22 +7,50 @@ import { Router } from '@angular/router';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent {
-  products: any[] = [];
+  products: any={};
 
   constructor(
-    private categoryService: CategoryService,
+ 
     private router: Router // Inject Router
   ) {}
 
-  handleCategoryClick(categoryName: string): void {
-    this.categoryService.fetchProductsByCategory(categoryName.toLowerCase())
-      .then(data => {
-        this.products = data;
-        
-        this.router.navigate(['/products', categoryName.toLowerCase()]);
-      })
-      .catch(error => {
-        console.error('Error fetching category:', error);
-      });
+  ngOnInit()
+  {
+    fetch('https://fakestoreapi.com/products/category/jewelery')
+            .then(res=>res.json())
+            .then(data => {
+              this.products = data;
+              console.log(this.products)
+            })
+            
+
+   
+    fetch('https://fakestoreapi.com/products/category/men')
+            .then(res=>res.json())
+            .then(data => {
+              this.products = data;
+              console.log(this.products)
+            })
+            
+
+            fetch('https://fakestoreapi.com/products/category/electronics')
+            .then(res=>res.json())
+            .then(data => {
+              this.products = data;
+              console.log(this.products)
+            })
+           
+
+            fetch('https://fakestoreapi.com/products')
+            .then(res=>res.json())
+            .then(data => {
+              this.products = data;
+              console.log(this.products)
+            })
+          
   }
+  
+
+
+
 }
