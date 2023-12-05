@@ -22,20 +22,32 @@ export class LoginComponent {
       password: this.password
     };
 
+    if(formData.username=='' || formData.password==''){
+      alert("Enter Your login details")
+    }
+
     fetch('https://fakestoreapi.com/auth/login', {
       method: 'POST',
       body: JSON.stringify(formData),
 
       headers: {
         'Content-Type': 'application/json'
+        
       }
+      
     })
     .then(res => res.json())
     
     
     
-    .then(json => localStorage.setItem('token', JSON.stringify(json)));
-    this.router.navigate(['/cart'])
+    .then(json => localStorage.setItem('token', JSON.stringify(json)))
+    // this.navigate();
+    if(localStorage.getItem('token') !== null){
+      this.router.navigate(['/cart'])
+    }else{
+      this.router.navigate(['/login'])
+    }
+    //this.router.navigate(['/cart'])
   }
 
   // myForm!: FormGroup;
@@ -55,4 +67,12 @@ export class LoginComponent {
   //   console.log('Message', form.value.password);
   // }
 
+  // navigate(){
+
+  //   if(localStorage.getItem('token') === null){
+  //     this.router.navigate(['/login'])
+  //   }else{
+  //     this.router.navigate(['/cart'])
+  //   }
+  // }
 }

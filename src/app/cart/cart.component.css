@@ -1,4 +1,4 @@
-img{
+img {
     width: 120px;
     height: 150px;
     padding: 6px;
@@ -7,4 +7,10 @@ img{
 
 #form1 {
     max-width: max-content;
+}
+
+
+.description-p {
+    font-size: 10px;
+    color: gray;
 }
