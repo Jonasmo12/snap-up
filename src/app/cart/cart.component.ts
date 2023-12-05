@@ -16,8 +16,6 @@ export class CartComponent implements OnInit {
     private router: Router,
   ) { }
 
-  
-
   getCartTotal() {
     console.log("Items in the Cart: ", this.items)
     return this.items.reduce(
@@ -38,28 +36,11 @@ export class CartComponent implements OnInit {
     this.items = [...this.cartService.getItems()]
   }
 
-  // addToCart(item: any) {
-  //   if (!this.cartService.itemInTheCart(item)) {
-  //     item.quantity = 1;
-  //     this.cartService.clearCart(item);
-  //     this.items = [...this.cartService.getItems()];
-  //   }
-  // }
-
-  // removeItem(item: any[]) {
-  //   this.cartService.removeItem(item);
-  // }
-
   ngOnInit() {
     this.cartService.loadCart();
     this.items = this.cartService.getItems();
   }
 
-  // same() {
-  //   for(let i = 0; i < this.cartService.getItems.length; i++) {
-  //     console.log(i++)
-  //   }
-  // }
 
   checkout() {
     console.log(localStorage.getItem('token'))
