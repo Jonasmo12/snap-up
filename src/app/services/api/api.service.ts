@@ -26,18 +26,23 @@ export class ApiService {
   }
 
   getJewelery(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.productsUrl + '/category/jewelery')
+    return this.http.get<Product[]>(this.productsUrl + '/category/jewelery').pipe(
+      map(products => {return products.map(product => ({...product, quantity: 1}))})
+    )
   }
 
   getElectronics(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.productsUrl + '/category/electronics')
+    return this.http.get<Product[]>(this.productsUrl + '/category/electronics').pipe(
+      map(products => {return products.map(product => ({...product, quantity: 1}))}))
   }
 
   getMen(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.productsUrl + `/category/men's%20clothing`)
+    return this.http.get<Product[]>(this.productsUrl + `/category/men's%20clothing`).pipe(
+      map(products => {return products.map(product => ({...product, quantity: 1}))}))
   }
 
   getWomen(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.productsUrl + `/category/women's%20clothing`)
+    return this.http.get<Product[]>(this.productsUrl + `/category/women's%20clothing`).pipe(
+      map(products => {return products.map(product => ({...product, quantity: 1}))}))
   }
 }

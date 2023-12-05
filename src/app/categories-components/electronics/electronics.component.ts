@@ -18,8 +18,10 @@ export class ElectronicsComponent {
   ngOnInit(): void {
     this.electronics$ = this.apiService.getElectronics();
   }
-  
-  addToCart(product: Product, i: any) {
+
+  addToCart(product: Product, i: number) {
     this.cartService.addToCart(product, i);
+    alert('Item added to Cart');
+    console.log('Product added to cart:', product);
   }
 }
