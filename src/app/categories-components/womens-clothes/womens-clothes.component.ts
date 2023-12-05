@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService  } from '../api.service';
-import { CartService } from '../cart.service';
+import { ApiService  } from '../../api.service';
+import { CartService } from '../../cart.service';
 import { Observable } from 'rxjs';
-import { Product } from '../models/product';
+import { Product } from '../../models/product';
 @Component({
   selector: 'app-womens-clothes',
   templateUrl: './womens-clothes.component.html',

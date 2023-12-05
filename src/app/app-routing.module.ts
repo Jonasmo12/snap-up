@@ -5,10 +5,10 @@ import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './product/product.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { JeweleryComponent } from './jewelery/jewelery.component';
-import { ElectronicsComponent } from './electronics/electronics.component';
-import { MensClothesComponent } from './mens-clothes/mens-clothes.component';
-import { WomensClothesComponent } from './womens-clothes/womens-clothes.component';
+import { JeweleryComponent } from './categories-components/jewelery/jewelery.component';
+import { ElectronicsComponent } from './categories-components/electronics/electronics.component';
+import { MensClothesComponent } from './categories-components/mens-clothes/mens-clothes.component';
+import { WomensClothesComponent } from './categories-components/womens-clothes/womens-clothes.component';
 
 const routes: Routes = [
   {path: '', component: BannerComponent},

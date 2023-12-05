@@ -14,13 +14,13 @@ import { ProductComponent } from './product/product.component';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from './api.service';
 import { ProductListComponent } from './product-list/product-list.component';
-import { NewArrivalsComponent } from './new-arrivals/new-arrivals.component';
+import { NewArrivalsComponent } from './categories-components/new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { JeweleryComponent } from './jewelery/jewelery.component';
-import { ElectronicsComponent } from './electronics/electronics.component';
-import { MensClothesComponent } from './mens-clothes/mens-clothes.component';
-import { WomensClothesComponent } from './womens-clothes/womens-clothes.component';
+import { JeweleryComponent } from './categories-components/jewelery/jewelery.component';
+import { ElectronicsComponent } from './categories-components/electronics/electronics.component';
+import { MensClothesComponent } from './categories-components/mens-clothes/mens-clothes.component';
+import { WomensClothesComponent } from './categories-components/womens-clothes/womens-clothes.component';
 import { CartService } from './cart.service';
 
 

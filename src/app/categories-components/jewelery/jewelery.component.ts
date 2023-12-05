@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../api.service';
+import { ApiService } from '../../api.service';
 import { Observable } from 'rxjs';
-import { Product } from '../models/product';
-import { CartService } from '../cart.service';
+import { Product } from '../../models/product';
+import { CartService } from '../../cart.service';
 
 @Component({
   selector: 'app-jewelery',
