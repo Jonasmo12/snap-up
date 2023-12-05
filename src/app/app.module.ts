@@ -12,7 +12,7 @@ import { CartComponent } from './cart/cart.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductComponent } from './products/product/product.component';
 import { FormsModule } from '@angular/forms';
-import { ApiService } from './api.service';
+import { ApiService } from './services/api/api.service';
 import { ProductListComponent } from './products/product-list/product-list.component';
 import { NewArrivalsComponent } from './categories-components/new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
@@ -21,7 +21,7 @@ import { JeweleryComponent } from './categories-components/jewelery/jewelery.com
 import { ElectronicsComponent } from './categories-components/electronics/electronics.component';
 import { MensClothesComponent } from './categories-components/mens-clothes/mens-clothes.component';
 import { WomensClothesComponent } from './categories-components/womens-clothes/womens-clothes.component';
-import { CartService } from './cart.service';
+import { CartService } from './services/cart/cart.service';
 
 
 @NgModule({
