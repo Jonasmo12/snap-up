@@ -28,13 +28,5 @@ export class ProductListComponent implements OnInit {
     this.cartService.addToCart(product, i);
     alert('Item added to Cart');
     console.log('Product added to cart:', product);
-    // if (this.cartService.itemInTheCart(product)) {
-    //   console.log("Incrementing: " + product + " quantity");
-    //   this.cartService.getItems().
-
-    // } else {
-    //   console.log("adding product: " + product + " to cart");
-    //   this.cartService.addToCart(product)
-    // }
   }
 }
