@@ -25,3 +25,17 @@ font-style: normal;
 font-weight: 300;
 line-height: normal;
 }
+
+
+@media (max-width: 767px) {
+    .cards{
+        display: flex;
+        flex-direction: column;
+   
+    }
+
+    .produc{
+        margin-top: 50px;
+    }
+  }
+  

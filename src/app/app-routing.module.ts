@@ -9,6 +9,7 @@ import { JeweleryComponent } from './jewelery/jewelery.component';
 import { ElectronicsComponent } from './electronics/electronics.component';
 import { MensClothesComponent } from './mens-clothes/mens-clothes.component';
 
+
 const routes: Routes = [
   {path: '', component: BannerComponent},
   {path: 'login', component: LoginComponent},

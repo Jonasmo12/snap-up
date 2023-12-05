@@ -71,3 +71,52 @@ footer .copyright {
     width: 100%;
     text-align: center;
 }
+
+@media (max-width: 767px) {
+    .cards{
+        display: flex;
+        flex-direction: column;
+   
+    }
+
+    .produc{
+        margin-top: 50px;
+    }
+  }
+  @media (max-width: 767px) {
+    .banner {
+        height: auto; /* Adjust height to fit content */
+        padding: 2rem; /* Adjust padding as needed */
+        text-align: center; /* Center align content */
+    }
+
+    .banner .text-light {
+        margin-bottom: 1rem; /* Add spacing between text elements */
+    }
+
+    .banner input,
+    .banner button {
+        width: 100%; /* Set input and button width to 100% for responsiveness */
+        margin-bottom: 1rem; /* Add spacing between input and button */
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 2rem 1rem; /* Adjust padding as needed */
+        text-align: center; /* Center align content */
+    }
+
+    footer .col {
+        margin-bottom: 1.5rem; /* Add spacing between columns */
+    }
+
+    footer .install img {
+        width: auto; /* Adjust image width to fit smaller screens */
+        max-width: 100%; /* Ensure images don't overflow parent container */
+        margin-bottom: 1rem; /* Add spacing between images */
+    }
+
+    footer .copyright {
+        margin-top: 1.5rem; /* Add spacing between content and footer */
+    }
+}
