@@ -13,11 +13,11 @@ export class ElectronicsComponent {
 
   public electronics$!: Observable<Product[]>;
 
-  constructor(private apiService: ApiService, private cartService: CartService) {}
-productList:any[]=[];
+  constructor(private apiService: ApiService, private cartService: CartService) { }
+  productList: any[] = [];
 
   ngOnInit(): void {
-      this.electronics$ = this.apiService.getElectronics();
+    this.electronics$ = this.apiService.getElectronics();
   }
   addToCart(product: any, i: any) {
     this.cartService.addToCart(product, i);
