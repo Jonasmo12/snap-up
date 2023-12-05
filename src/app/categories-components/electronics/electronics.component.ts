@@ -19,10 +19,7 @@ export class ElectronicsComponent {
   ngOnInit(): void {
     this.electronics$ = this.apiService.getElectronics();
   }
-  addToCart(product: any, i: any) {
+  addToCart(product: Product, i: any) {
     this.cartService.addToCart(product, i);
-    this.productList.push(product);
-    localStorage.setItem('products', JSON.stringify(this.productList));
-    console.log('Product added to cart:', product);
   }
 }
