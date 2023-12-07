@@ -14,7 +14,7 @@ export class CartService {
     // this.cartItems.push(product);
     // this.saveCart()
     if (this.itemInTheCart(product)) {
-      this.cartItems[i].quantity++;
+      product.quantity ++;
       this.saveCart()
     } else {
       this.cartItems.push(product);
