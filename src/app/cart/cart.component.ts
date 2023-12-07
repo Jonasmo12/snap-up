@@ -29,6 +29,8 @@ export class CartComponent implements OnInit {
 
   removeFromCart(item: any) {
     this.cartService.removeItem(item)
+    confirm(`Are you sure you want to remove ${item.title}`)
+    this.cartService.loadCart()
   }
 
   clearCart(items: any) {
