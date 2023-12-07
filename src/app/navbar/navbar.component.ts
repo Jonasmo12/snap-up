@@ -6,11 +6,15 @@ import { CartService } from '../services/cart/cart.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
 
   cartitemsQuantity = this.cartService.getItems.length
 
 
   constructor(private cartService: CartService) {}
+
+  ngOnInit(): void {
+      this.cartService.loadCart()
+  }
 
 }

@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../../models/product';
-import { Observable, Subject, map, pipe } from 'rxjs';
+import { BehaviorSubject, Observable, Subject, map, pipe } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
   private cartItems: Product[] = [];
+  cartItemsSubject = new BehaviorSubject(this.cartItems).asObservable()
 
-  constructor() { }
+  
 
   addToCart(product: Product, i: number ) {
     // this.cartItems.push(product);
@@ -51,4 +52,6 @@ export class CartService {
     this.cartItems = [];
     localStorage.removeItem("cart_products")
   }
+
+  constructor() { }
 }
