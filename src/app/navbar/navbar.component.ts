@@ -7,12 +7,13 @@ import { CartService } from '../services/cart/cart.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  cartitemsQuantity!: number;
+  cartitemsQuantity$!: any;
 
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
     this.cartService.loadCart()
-    this.cartitemsQuantity = this.cartService.cartQuantity();
+    this.cartitemsQuantity$ = this.cartService.cartQuantity();
+    //console.log("Obs says: ", this.cartService.getItemIntheCart$.length)
   }
 }

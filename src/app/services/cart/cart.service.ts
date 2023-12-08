@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../../models/product';
+import { BehaviorSubject, tap, map, pipe, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
   private cartItems: Product[] = [];
+  cartItems$ = new BehaviorSubject(this.cartItems).asObservable();
+  
 
   addToCart(product: Product, i: number ) {
     if (this.itemInTheCart(product)) {
@@ -18,8 +21,15 @@ export class CartService {
   }
 
   getItems(): Product[] {
-    console.log('cart quantity: ', this.cartItems.length)
+    //console.log('cart quantity: ', this.cartItems.length)
     return this.cartItems;
+  }
+
+
+  getItemIntheCart$(): Observable<Product[]> { 
+    return this.cartItems$.pipe(
+      tap(data => console.log("data: ", data))
+  );
   }
 
   cartQuantity() : number {
