@@ -1,19 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../../models/product';
-import { BehaviorSubject, Observable, Subject, map, pipe, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
   private cartItems: Product[] = [];
-  cartItemsSubject$ = new BehaviorSubject(this.cartItems).asObservable()
-
-  
 
   addToCart(product: Product, i: number ) {
-    // this.cartItems.push(product);
-    // this.saveCart()
     if (this.itemInTheCart(product)) {
       product.quantity ++;
       this.saveCart()
@@ -23,17 +17,12 @@ export class CartService {
     }
   }
 
-  getCartItem$ = this.cartItemsSubject$.pipe(
-    tap(items => console.log('im logging observables from cart: ', items))
-  )
-
   getItems(): Product[] {
     console.log('cart quantity: ', this.cartItems.length)
     return this.cartItems;
   }
 
   cartQuantity() : number {
-    //return this.cartItems.length
     let sum = 0;
     this.cartItems.forEach(it => { sum += it.quantity})
     return sum
@@ -56,7 +45,6 @@ export class CartService {
   }
 
   itemInTheCart(item: Product): any {
-    // return this.items.findIndex(o => o.id === item.id > -1);
     return this.cartItems.find(each => each.id === item.id === true)
   }
 

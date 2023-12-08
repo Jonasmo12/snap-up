@@ -7,15 +7,12 @@ import { CartService } from '../services/cart/cart.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
   cartitemsQuantity!: number;
 
-
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
-      this.cartService.loadCart()
-      this.cartitemsQuantity = this.cartService.cartQuantity()
+    this.cartService.loadCart()
+    this.cartitemsQuantity = this.cartService.cartQuantity();
   }
-
 }
