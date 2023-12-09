@@ -25,6 +25,10 @@ export class ApiService {
     )
   }
 
+  getProductById(productID: number): Observable<Product> {
+    return this.http.get<Product>(this.productsUrl + '/' + productID)
+  }
+
   getJewelery(): Observable<Product[]> {
     return this.http.get<Product[]>(this.productsUrl + '/category/jewelery').pipe(
       map(products => {return products.map(product => ({...product, quantity: 1}))})
