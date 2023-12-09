@@ -9,10 +9,12 @@ import { CartService } from '../services/cart/cart.service';
 export class NavbarComponent implements OnInit {
   cartitemsQuantity!: number;
 
-  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
     this.cartService.loadCart()
     this.cartitemsQuantity = this.cartService.cartQuantity();
   }
+
+
+  constructor(public cartService: CartService) { }
 }
