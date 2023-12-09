@@ -22,6 +22,7 @@ import { ElectronicsComponent } from './categories-components/electronics/electr
 import { MensClothesComponent } from './categories-components/mens-clothes/mens-clothes.component';
 import { WomensClothesComponent } from './categories-components/womens-clothes/womens-clothes.component';
 import { CartService } from './services/cart/cart.service';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { CartService } from './services/cart/cart.service';
     WomensClothesComponent,
     FooterComponent,
     NewArrivalsComponent,
+    AddToCartComponent,
   ],
   imports: [
     BrowserModule,
