@@ -15,10 +15,14 @@ export class AddToCartComponent {
   // product!: Product;
 
   addToCart(product: Product) {
+    try {
 
     this.cartService.addToCart(product);
     alert('Item added to Cart');
     console.log('Product added to cart:', product);
+    } catch (err) {
+      console.log(err)
+    }
 
   }
 
