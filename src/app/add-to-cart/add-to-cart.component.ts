@@ -12,8 +12,6 @@ export class AddToCartComponent {
 
   @Input() products$!: Product;
 
-  // product!: Product;
-
   addToCart(product: Product) {
     try {
       this.cartService.addToCart(product);
@@ -22,7 +20,5 @@ export class AddToCartComponent {
     } catch (err) {
       console.log(err)
     }
-
   }
-
 }
