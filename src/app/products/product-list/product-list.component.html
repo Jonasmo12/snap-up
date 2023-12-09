@@ -26,7 +26,7 @@
                 <div class="col-lg-3 product-card" *ngFor="let product of products$ | async; index as i ">
                     <img class="product-img" width="200px" height="200" src="{{product.image}}" alt="">
                     <p class="lead pt-2 product-title">
-                        {{ product.title }}
+                        <a [routerLink]="['/products', product.title]">{{ product.title }}</a>
                     </p>
 
                     <div class="product-description"></div>
