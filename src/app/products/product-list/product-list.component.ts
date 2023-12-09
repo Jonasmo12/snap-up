@@ -13,15 +13,12 @@ export class ProductListComponent implements OnInit {
   public products$!: Observable<Product[]>;
   public cartItems: Product[] = [];
 
-  constructor(
-    private apiService: ApiService,
-    private cartService: CartService
-  ) { }
+  
 
 
   ngOnInit(): void {
     this.products$ = this.apiService.getProducts();
-    console.log("new products: ", this.products$)
+    this.cartService.loadCart()
   }
 
   addToCart(product: Product, i: number) {
@@ -29,4 +26,6 @@ export class ProductListComponent implements OnInit {
     alert('Item added to Cart');
     console.log('Product added to cart:', product);
   }
+
+  constructor(private apiService: ApiService, private cartService: CartService) { }
 }
