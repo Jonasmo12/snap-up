@@ -14,8 +14,13 @@ const routes: Routes = [
   {path: '', component: BannerComponent},
   {path: 'login', component: LoginComponent},
   {path: 'cart', component: CartComponent},
-  {path: 'product', component: ProductComponent},
-  { path: 'products', component: ProductListComponent},
+  { 
+    path: 'products', 
+    component: ProductListComponent,
+    children: [
+      {path: ':title', component: ProductComponent}
+    ]
+  },
   { path: 'products/:category', component: ProductComponent },
   {path:'jewelery', component:JeweleryComponent},
   {path:'electronics',component:ElectronicsComponent},
