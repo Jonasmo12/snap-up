@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, computed } from '@angular/core';
 import { CartService } from '../services/cart/cart.service';
 
 @Component({
@@ -8,9 +8,13 @@ import { CartService } from '../services/cart/cart.service';
 })
 export class NavbarComponent implements OnInit {
 
+  constructor(private cartService: CartService) { }
+
+  cartQuantityCount = computed(() => this.cartService.cartItems().reduce(
+    (acc, item) => acc + item.quantity, 0))
+
   ngOnInit(): void {
-    this.cartService.loadCart()
+    this.cartService.cartItems
   }
 
-  constructor(public cartService: CartService) { }
 }

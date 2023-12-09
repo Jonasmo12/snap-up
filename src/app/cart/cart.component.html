@@ -10,7 +10,7 @@
 </div>
 
 <div class="container">
-  <div class="row" *ngFor="let item of items; let i = index">
+  <div class="row" *ngFor="let item of items(); let i = index">
     <div class="col-lg-3">
       <div class="row" id="{{ item.id }}">
         <div class="col-lg-4">
@@ -40,19 +40,21 @@
   </div>
 </div>
 
-<div class="container mt-5">
+<div class="container mt-5" *ngIf="items().length">
   <div class="row">
     <div class="col-lg-4"></div>
     <div class="col-lg-4"></div>
     <div class="col-lg-2"><b>Grand Total:</b>
       <hr>
     </div>
-    <div class="col-lg-2">R {{ getCartTotal()}}
+    <div class="col-lg-2">R {{ getCartTotal() | number:'1.2-2'}}
       <hr>
     </div>
   </div>
 </div>
-<div class="container mt-3">
+
+
+<div class="container mt-3" *ngIf="items().length">
   <div class="row">
     <div class="col-lg-4">
     </div>
