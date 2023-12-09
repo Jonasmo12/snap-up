@@ -3,6 +3,7 @@ import { ApiService } from '../../services/api/api.service';
 import { Observable } from 'rxjs';
 import { Product } from '../../models/product';
 import { CartService } from '../../services/cart/cart.service';
+import { AddToCartComponent } from 'src/app/add-to-cart/add-to-cart.component';
 
 @Component({
   selector: 'app-product-list',
@@ -18,13 +19,6 @@ export class ProductListComponent implements OnInit {
 
   ngOnInit(): void {
     this.products$ = this.apiService.getProducts();
-    //this.cartService.loadCart()
-  }
-
-  addToCart(product: Product) {
-    this.cartService.addToCart(product);
-    alert('Item added to Cart');
-    console.log('Product added to cart:', product);
   }
 
   constructor(private apiService: ApiService, private cartService: CartService) { }
