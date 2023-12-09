@@ -9,23 +9,23 @@ import { JeweleryComponent } from './categories-components/jewelery/jewelery.com
 import { ElectronicsComponent } from './categories-components/electronics/electronics.component';
 import { MensClothesComponent } from './categories-components/mens-clothes/mens-clothes.component';
 import { WomensClothesComponent } from './categories-components/womens-clothes/womens-clothes.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 const routes: Routes = [
-  {path: '', component: BannerComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'cart', component: CartComponent},
-  { 
-    path: 'products', 
-    component: ProductListComponent,
+  { path: '', component: BannerComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'cart', component: CartComponent },
+  { path: 'products', component: ProductListComponent },
+  { path: 'products/:id', component: ProductComponent },
+  {
+    path: 'categories/', component: CategoriesComponent,
     children: [
-      {path: ':title', component: ProductComponent}
+      { path: 'jewelery', component: JeweleryComponent },
+      { path: 'electronics', component: ElectronicsComponent },
+      { path: "men's%20clothin", component: MensClothesComponent },
+      { path: 'women', component: WomensClothesComponent }
     ]
   },
-  { path: 'products/:category', component: ProductComponent },
-  {path:'jewelery', component:JeweleryComponent},
-  {path:'electronics',component:ElectronicsComponent},
-  {path: 'men',component:MensClothesComponent},
-  {path: 'women',component: WomensClothesComponent}
   // {path: '', redirectTo: '', pathMatch: 'full' },
 ];
 
