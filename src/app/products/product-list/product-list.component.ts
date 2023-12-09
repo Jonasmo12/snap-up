@@ -21,11 +21,5 @@ export class ProductListComponent implements OnInit {
     this.products$ = this.apiService.getProducts();
   }
 
-  addToCart(product: Product) {
-    this.cartService.addToCart(product);
-    alert('Item added to Cart');
-    console.log('Product added to cart:', product);
-  }
-
   constructor(private apiService: ApiService, private cartService: CartService) { }
 }

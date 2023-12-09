@@ -13,10 +13,10 @@
             <h6>Categories</h6>
             <p class="categories-p">
                 <a class="category-link" routerLink="/products">All</a> <span class="default">default</span> <br>
-                <a class="category-link"  routerLink="/women">Women</a> <br>
-                <a class="category-link"  routerLink="/men">Men</a> <br>
-                <a class="category-link"  routerLink="/electronics">Electronics</a> <br>
-                <a class="category-link"  routerLink="/jewelery">Jewellery</a> <br>
+                <a class="category-link" routerLink="/women">Women</a> <br>
+                <a class="category-link" routerLink="/men">Men</a> <br>
+                <a class="category-link" routerLink="/electronics">Electronics</a> <br>
+                <a class="category-link" routerLink="/jewelery">Jewellery</a> <br>
             </p>
         </div>
 
@@ -24,17 +24,14 @@
         <div class="col-lg-8">
             <div class="row">
                 <div class="col-lg-3 product-card" *ngFor="let product of products$ | async; index as i ">
-                    <img class="product-img" width="200px" height="200"
-                        src="{{product.image}}"
-                        alt="">
+                    <img class="product-img" width="200px" height="200" src="{{product.image}}" alt="">
                     <p class="lead pt-2 product-title">
-                       {{ product.title | slice:0:25 }}
+                        {{ product.title | slice:0:25 }}
                     </p>
 
-                    <p class="product-description">
-                        {{ product.description | slice:0:50 }}
-                        
-                    ...</p>
+                    <div class="product-description">
+
+                    </div>
 
                     <div class="price-and-cart-div">
                         <div class="price">
@@ -46,25 +43,11 @@
                             <app-add-to-cart [products$]="product"></app-add-to-cart>
                         </div>
                     </div>
-                    
+
+
 
                 </div>
-                <!-- <div class="col-lg-3">2</div>
-                <div class="col-lg-3">3</div>
-                <div class="col-lg-3">4</div> -->
-                
             </div>
         </div>
-
-
-        <!-- <div class="col-lg-2 text-end">
-            <h6>Sort</h6>
-            <p class="sort-filter-p">
-                <a class="sort-link" href="">high - low</a> <br>
-                <a class="sort-link" href="">low - high</a> <br>
-
-            </p>
-        </div> -->
     </div>
-</div>
-<app-footer></app-footer>
+    <app-footer></app-footer>
