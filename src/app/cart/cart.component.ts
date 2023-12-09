@@ -8,41 +8,18 @@ import { Router } from '@angular/router';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.css']
 })
-export class CartComponent implements OnInit {
-  items: Product[] = [];
+export class CartComponent {
+  constructor(private cartService: CartService, private router: Router) { }
 
-  constructor(
-    private cartService: CartService,
-    private router: Router,
-  ) { }
+  items = this.cartService.cartItems;
 
-  getCartTotal(): number {
-    console.log("Items in the Cart: ", this.items)
-    return this.items.reduce(
-      (sum, x) => ({
-        quantity: 1,
-        price: sum.price + x.quantity * x.price
-      }),
-      { quantity: 1, price: 0 }
-    ).price
+  getCartTotal = this.cartService.cartTotal
+
+  removeFromCart(product: Product) {
+    this.cartService.removeItem(product)
+    confirm(`Are you sure you want to remove ${product.title}`)
+    //this.cartService.loadCart()
   }
-
-  removeFromCart(item: any) {
-    this.cartService.removeItem(item)
-    confirm(`Are you sure you want to remove ${item.title}`)
-    this.cartService.loadCart()
-  }
-
-  clearCart(items: any) {
-    this.cartService.clearCart(items);
-    this.items = [...this.cartService.getItems()]
-  }
-
-  ngOnInit() {
-    this.cartService.loadCart();
-    this.items = this.cartService.getItems();
-  }
-
 
   checkout() {
     console.log(localStorage.getItem('token'))
