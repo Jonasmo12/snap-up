@@ -15,7 +15,7 @@ export class AddToCartComponent {
   addToCart(product: Product) {
     try {
       this.cartService.addToCart(product);
-      confirm(`${product.title} added to cart`);
+      confirm(`add ${product.title} to cart?`);
       console.log('Product added to cart:', product);
     } catch (err) {
       console.log(err)
