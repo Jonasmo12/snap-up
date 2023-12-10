@@ -6,12 +6,22 @@
     </div>
 </div>
 
-<app-category-nav />
-
-<div class="container">
+<div class="container category-nav">
     <div class="row">
+        <div class="col-lg-12 categorie" *ngFor="let category of categorie$ | async; index as i">
 
 
+            <a class="category-link" [class.selected]="category === selectedCategory" (click)="isSelected(category)"
+                routerLink="/products">{{category}}</a>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="selectedCategory">
+    {{ selectedCategory }}
+    <div class="row">
         <div class="col-lg-8">
             <div class="row">
                 <div class="col-lg-3 product-card" *ngFor="let product of products$ | async; index as i ">

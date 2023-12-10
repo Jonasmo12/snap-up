@@ -1,4 +1,4 @@
-import { Component, Inject, inject } from '@angular/core';
+import { Component, Inject, Input, inject } from '@angular/core';
 import { ApiService } from '../services/api/api.service';
 import { Observable } from 'rxjs';
 
@@ -9,17 +9,18 @@ import { Observable } from 'rxjs';
 })
 export class CategoryNavComponent {
   apiService: ApiService = inject(ApiService);
-  categorie$!: Observable<any[]>;
+  
+  //@Input() categorie$!: any;
+ // @Input() selectedCategory!: any;
 
-  selectedCategory?: CategoryNavComponent
+  
+  
 
   constructor() {
-    this.categorie$ = this.apiService.getCategories();
+    
   }
-
-  isSelected(category: any): void {
-    this.selectedCategory = category;
-    console.log('selected Category: ', category)
-  }
+  
+  
+  
 
 }

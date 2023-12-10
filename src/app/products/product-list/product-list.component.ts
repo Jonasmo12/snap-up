@@ -14,10 +14,20 @@ import { CategoryNavComponent } from 'src/app/category-nav/category-nav.componen
 export class ProductListComponent implements OnInit {
   public products$!: Observable<Product[]>;
   public cartItems: Product[] = [];
+  categorie$!: Observable<any[]>;
+
+  selectedCategory?: CategoryNavComponent
 
   ngOnInit(): void {
     this.products$ = this.apiService.getProducts();
+    this.categorie$ = this.apiService.getCategories();
   }
 
   constructor(private apiService: ApiService, private cartService: CartService) { }
+
+
+  isSelected(category: any): void {
+    this.selectedCategory = category;
+    console.log('selected Category: ', category)
+  }
 }
