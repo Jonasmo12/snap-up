@@ -3,8 +3,6 @@
     background-size: contain;
     padding-top: 500px;
     padding-bottom: 50px;
-    /* background-color: #F2C6B6; */
-    /* background-blend-mode: multiply; */
     color: #fff;
     margin-bottom: 50px;
     background-position: center;
@@ -14,10 +12,8 @@
     height: 7em;
 }
 
-
 .categories {
     display: flex;
-    /* justify-content: start; */
     gap: 5em;
     margin-bottom: 2em;
 }
@@ -46,7 +42,6 @@
     text-decoration: none;
     color: #000;
 }
-
 
 .product-title-link:hover {
     text-decoration: none;
