@@ -5,10 +5,6 @@ import { LoginComponent } from './login/login.component';
 import { ProductComponent } from './products/product/product.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
-import { JeweleryComponent } from './categories-components/jewelery/jewelery.component';
-import { ElectronicsComponent } from './categories-components/electronics/electronics.component';
-import { MensClothesComponent } from './categories-components/mens-clothes/mens-clothes.component';
-import { WomensClothesComponent } from './categories-components/womens-clothes/womens-clothes.component';
 import { CategoriesComponent } from './categories/categories.component';
 
 const routes: Routes = [
@@ -17,11 +13,7 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'products', component: ProductListComponent },
   { path: 'products/:id', component: ProductComponent },
-  { path: 'categories/', component: CategoriesComponent},
-  { path: 'jewelery', component: JeweleryComponent },
-  { path: 'electronics', component: ElectronicsComponent },
-  { path: 'men', component: MensClothesComponent },
-  { path: 'women', component: WomensClothesComponent }
+  { path: 'categories/', component: CategoriesComponent}
   // {path: '', redirectTo: '', pathMatch: 'full' },
 ];
 

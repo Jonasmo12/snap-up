@@ -14,13 +14,8 @@ import { ProductComponent } from './products/product/product.component';
 import { FormsModule } from '@angular/forms';
 import { ApiService } from './services/api/api.service';
 import { ProductListComponent } from './products/product-list/product-list.component';
-import { NewArrivalsComponent } from './categories-components/new-arrivals/new-arrivals.component';
 import { FooterComponent } from './footer/footer.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { JeweleryComponent } from './categories-components/jewelery/jewelery.component';
-import { ElectronicsComponent } from './categories-components/electronics/electronics.component';
-import { MensClothesComponent } from './categories-components/mens-clothes/mens-clothes.component';
-import { WomensClothesComponent } from './categories-components/womens-clothes/womens-clothes.component';
 import { CartService } from './services/cart/cart.service';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { CategoryNavComponent } from './category-nav/category-nav.component';
@@ -42,12 +37,7 @@ import { CategoryNavComponent } from './category-nav/category-nav.component';
     BannerComponent,
     CartComponent,
     ProductComponent,
-    JeweleryComponent,
-    ElectronicsComponent,
-    MensClothesComponent,
-    WomensClothesComponent,
     FooterComponent,
-    NewArrivalsComponent,
     AddToCartComponent,
     CategoryNavComponent,
   ],
