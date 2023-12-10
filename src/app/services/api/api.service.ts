@@ -33,6 +33,10 @@ export class ApiService {
     return this.http.get<any[]>(this.productsUrl + '/categories')
   }
 
+  getCategory(categoryName: string): Observable<any[]> {
+    return this.http.get<any>(this.productsUrl + '/' + categoryName)
+  }
+
   getJewelery(): Observable<Product[]> {
     return this.http.get<Product[]>(this.productsUrl + '/category/jewelery').pipe(
       map(products => {return products.map(product => ({...product, quantity: 1}))})
