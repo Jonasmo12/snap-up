@@ -40,3 +40,15 @@
     padding: 20px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
+.product-title-link {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.product-title-link:hover {
+    text-decoration: none;
+    color: gray;
+    transition: .2s;
+}

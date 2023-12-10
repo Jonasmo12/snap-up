@@ -26,7 +26,7 @@
                     <img class="product-img" src="{{product.image}}" alt="">
                     <hr>
                     <p class="lead pt-2 product-title">
-                        <a [routerLink]="['/products/', product.id]">{{ product.title }}</a>
+                        <a class="product-title-link" [routerLink]="['/products/', product.id]">{{ product.title }}</a>
                     </p>
 
                     <div class="product-description"></div>
