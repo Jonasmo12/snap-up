@@ -7,22 +7,13 @@ import { Product } from '../../models/product';
   providedIn: 'root'
 })
 export class ApiService {
-
-  private products: Product[] = [];
-
   private productsUrl = 'https://fakestoreapi.com/products';
-  private apiHomeUrl = 'https://fakestoreapi.com'
-
-  
 
   constructor(private http: HttpClient) { }
 
-  
-
-  getProducts() : Observable<Product[]> {
+  getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.productsUrl).pipe(
-      map(products => {return products.map(product => ({...product, quantity: 1}))})
-    
+      map(products => { return products.map(product => ({ ...product, quantity: 1 })) })
     )
   }
 
