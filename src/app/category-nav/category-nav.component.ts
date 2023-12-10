@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class CategoryNavComponent {
   apiService: ApiService = inject(ApiService);
   
-  //@Input() categorie$!: any;
+  // @Input() categorie$!: any;
  // @Input() selectedCategory!: any;
 
   
