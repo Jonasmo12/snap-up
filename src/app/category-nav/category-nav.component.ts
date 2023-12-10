@@ -1,5 +1,6 @@
 import { Component, Inject, inject } from '@angular/core';
 import { ApiService } from '../services/api/api.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-category-nav',
@@ -8,8 +9,10 @@ import { ApiService } from '../services/api/api.service';
 })
 export class CategoryNavComponent {
   apiService: ApiService = inject(ApiService);
-  categories!: any[]
+  categorie$!: Observable<any[]>;
 
-  constructor() {}
+  constructor() {
+    this.categorie$ = this.apiService.getCategories();
+  }
 
 }
