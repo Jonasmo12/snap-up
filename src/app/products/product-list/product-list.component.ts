@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api/api.service';
 import { Observable } from 'rxjs';
 import { Product } from '../../models/product';
@@ -16,6 +16,8 @@ export class ProductListComponent implements OnInit {
   public cartItems: Product[] = [];
   categorie$!: Observable<any[]>;
 
+  clickeCategoryProducts$!: Product[];
+
   selectedCategory?: CategoryNavComponent
 
   ngOnInit(): void {
@@ -29,7 +31,7 @@ export class ProductListComponent implements OnInit {
   isSelected(category: any): void {
     this.selectedCategory = category;
     console.log('selected Category: ', category)
-    let getCategoryProducts = this.apiService.getCategory(category).pipe(items => this.products$ = items)
-    console.log('clicked category products: ', getCategoryProducts)
+    let getCategoryProducts$ = this.apiService.getCategory(category).subscribe(items => this.clickeCategoryProducts$ = items)
+    console.log('clicked category products: ', this.clickeCategoryProducts$)
   }
 }
