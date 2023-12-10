@@ -7,7 +7,7 @@
             <h4>{{product?.title}}</h4>
             <p class="product-description">{{product?.description}}</p>
             <p>
-                <a [routerLink]="['/categories', product.category]"><strong>{{product?.category}}</strong></a>
+                <a routerLink="/{{product.category}}"><strong>{{product?.category}}</strong></a>
             </p>
             <div class="price-and-add-to-cart-box">
                 <p><strong>R {{product?.price | number:'1.2-2'}}</strong></p>

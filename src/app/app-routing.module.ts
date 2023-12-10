@@ -17,15 +17,11 @@ const routes: Routes = [
   { path: 'cart', component: CartComponent },
   { path: 'products', component: ProductListComponent },
   { path: 'products/:id', component: ProductComponent },
-  {
-    path: 'categories/', component: CategoriesComponent,
-    children: [
-      { path: 'jewelery', component: JeweleryComponent },
-      { path: 'electronics', component: ElectronicsComponent },
-      { path: "men's%20clothin", component: MensClothesComponent },
-      { path: 'women', component: WomensClothesComponent }
-    ]
-  },
+  { path: 'categories/', component: CategoriesComponent},
+  { path: 'jewelery', component: JeweleryComponent },
+  { path: 'electronics', component: ElectronicsComponent },
+  { path: 'men', component: MensClothesComponent },
+  { path: 'women', component: WomensClothesComponent }
   // {path: '', redirectTo: '', pathMatch: 'full' },
 ];
 

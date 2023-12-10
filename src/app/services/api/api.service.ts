@@ -41,12 +41,12 @@ export class ApiService {
   }
 
   getMen(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.productsUrl + `/category/men's%20clothing`).pipe(
+    return this.http.get<Product[]>(this.productsUrl + '/category/men').pipe(
       map(products => {return products.map(product => ({...product, quantity: 1}))}))
   }
 
   getWomen(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.productsUrl + `/category/women's%20clothing`).pipe(
+    return this.http.get<Product[]>(this.productsUrl + '/category/women').pipe(
       map(products => {return products.map(product => ({...product, quantity: 1}))}))
   }
 }
