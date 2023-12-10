@@ -23,6 +23,7 @@ import { MensClothesComponent } from './categories-components/mens-clothes/mens-
 import { WomensClothesComponent } from './categories-components/womens-clothes/womens-clothes.component';
 import { CartService } from './services/cart/cart.service';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { CategoryNavComponent } from './category-nav/category-nav.component';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
     FooterComponent,
     NewArrivalsComponent,
     AddToCartComponent,
+    CategoryNavComponent,
   ],
   imports: [
     BrowserModule,
