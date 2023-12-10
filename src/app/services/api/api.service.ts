@@ -29,8 +29,8 @@ export class ApiService {
     return this.http.get<Product>(this.productsUrl + '/' + productID)
   }
 
-  getCategories(): Observable<any> {
-    return this.http.get<any>(this.productsUrl + '/categories')
+  getCategories(): Observable<any[]> {
+    return this.http.get<any[]>(this.productsUrl + '/categories')
   }
 
   getJewelery(): Observable<Product[]> {

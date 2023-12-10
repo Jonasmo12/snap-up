@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject, inject } from '@angular/core';
+import { ApiService } from '../services/api/api.service';
 
 @Component({
   selector: 'app-category-nav',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./category-nav.component.css']
 })
 export class CategoryNavComponent {
+  apiService: ApiService = inject(ApiService);
+  categories!: any[]
+
+  constructor() {}
 
 }
