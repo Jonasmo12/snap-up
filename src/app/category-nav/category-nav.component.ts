@@ -11,8 +11,15 @@ export class CategoryNavComponent {
   apiService: ApiService = inject(ApiService);
   categorie$!: Observable<any[]>;
 
+  selectedCategory?: CategoryNavComponent
+
   constructor() {
     this.categorie$ = this.apiService.getCategories();
+  }
+
+  isSelected(category: any): void {
+    this.selectedCategory = category;
+    console.log('selected Category: ', category)
   }
 
 }

@@ -3,7 +3,7 @@
         <div class="col-lg-12 categorie" *ngFor="let category of categorie$ | async; index as i">
 
 
-            <a class="category-link" [class.selected]="category === selectedCategory" (click)="isSelecte(category)"
+            <a class="category-link" [class.selected]="category === selectedCategory" (click)="isSelected(category)"
                 routerLink="/products">{{category}}</a>
 
 
