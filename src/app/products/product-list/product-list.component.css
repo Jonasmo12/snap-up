@@ -18,3 +18,15 @@
 .product-title {
     height: 10em;
 }
+
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 5em;
+    margin-bottom: 5em;
+}
+
+.category-link {
+    padding-bottom: 10px;
+}
