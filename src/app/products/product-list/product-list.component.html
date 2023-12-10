@@ -24,7 +24,7 @@
     <div class="row">
         <div class="col-lg-8">
             <div class="row">
-                <div class="col-lg-3 product-card" *ngFor="let product of clickeCategoryProducts$ | async; index as i ">
+                <div class="col-lg-3 product-card" *ngFor="let product of clickedCategoryProducts$ | async; index as i ">
                     <img class="product-img" width="200px" height="200" src="{{product.image}}" alt="">
                     <p class="lead pt-2 product-title">
                         <a [routerLink]="['/products/', product.id]">{{ product.title }}</a>
