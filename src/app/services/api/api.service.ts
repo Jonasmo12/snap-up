@@ -11,6 +11,7 @@ export class ApiService {
   private products: Product[] = [];
 
   private productsUrl = 'https://fakestoreapi.com/products';
+  private apiHomeUrl = 'https://fakestoreapi.com'
 
   
 
@@ -27,6 +28,14 @@ export class ApiService {
 
   getProductById(productID: number): Observable<Product> {
     return this.http.get<Product>(this.productsUrl + '/' + productID)
+  }
+
+  getCategories(): Observable<any[]> {
+    return this.http.get<any[]>(this.productsUrl + '/categories')
+  }
+
+  getCategory(categoryName: string): Observable<Product[]> {
+    return this.http.get<Product[]>(this.productsUrl + '/category/' + categoryName);
   }
 
   getJewelery(): Observable<Product[]> {
