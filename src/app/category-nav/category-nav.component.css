@@ -1,4 +1,11 @@
 .category-nav {
+    margin-bottom: 120px;
+}
+
+.categories-p {
     display: flex;
-    justify-content: space-between;
+    justify-content: center !important;
+    gap: 60px;
+    font-size: 16px !important;
+    
 }
