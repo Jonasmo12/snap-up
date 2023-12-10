@@ -1,0 +1,5 @@
+.cart:hover {
+    cursor: pointer;
+    transition: .2s;
+    color: skyblue;
+}

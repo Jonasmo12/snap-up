@@ -1,33 +1,34 @@
-<div class="container bg-products">
+<div class="container-fluid bg-products">
     <div class="row">
         <div class="col-lg-12">
-            <h2>shop the look</h2>
+            <div class="container">
+                <h2>shop the look</h2>
+            </div>
         </div>
     </div>
 </div>
 
 <div class="container category-nav">
     <div class="row">
-        <div class="col-lg-12 categorie" *ngFor="let category of categorie$ | async; index as i">
-
-
-            <a class="category-link" [class.selected]="category === selectedCategory" (click)="isSelected(category)"
+        <div class="col-lg-12 categories" >
+            <div class="" *ngFor="let category of categorie$ | async; index as i">
+                <a class="category-link" [class.selected]="category === selectedCategory" (click)="isSelected(category)"
                 routerLink="/products">{{category}}</a>
-
-
+            </div>
         </div>
     </div>
 </div>
 
 <div class="container">
-    {{ selectedCategory }}
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-12">
             <div class="row">
-                <div class="col-lg-3 product-card" *ngFor="let product of clickedCategoryProducts$ | async; index as i ">
-                    <img class="product-img" width="200px" height="200" src="{{product.image}}" alt="">
+                <div class="col-lg-3 product-card"
+                    *ngFor="let product of clickedCategoryProducts$ | async; index as i ">
+                    <img class="product-img" src="{{product.image}}" alt="">
+                    <hr>
                     <p class="lead pt-2 product-title">
-                        <a [routerLink]="['/products/', product.id]">{{ product.title }}</a>
+                        <a class="product-title-link" [routerLink]="['/products/', product.id]">{{ product.title }}</a>
                     </p>
 
                     <div class="product-description"></div>
