@@ -29,5 +29,7 @@ export class ProductListComponent implements OnInit {
   isSelected(category: any): void {
     this.selectedCategory = category;
     console.log('selected Category: ', category)
+    let getCategoryProducts = this.apiService.getCategory(category).pipe(items => this.products$ = items)
+    console.log('clicked category products: ', getCategoryProducts)
   }
 }
