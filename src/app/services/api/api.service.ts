@@ -35,7 +35,7 @@ export class ApiService {
   }
 
   getCategory(categoryName: string): Observable<Product[]> {
-    return this.http.get<Product[]>(this.apiHomeUrl + '/' + categoryName)
+    return this.http.get<Product[]>(this.productsUrl + '/category/' + categoryName);
   }
 
   getJewelery(): Observable<Product[]> {
