@@ -1,10 +1,10 @@
 .bg-products {
-    background: url("https://images.pexels.com/photos/697244/pexels-photo-697244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") center center;
+    /* background: url("https://images.pexels.com/photos/697244/pexels-photo-697244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") center center; */
     background-size: contain;
-    padding-top: 500px;
-    padding-bottom: 50px;
-    color: #fff;
-    margin-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    color: #000;
+    margin-bottom: 20px;
     background-position: center;
 }
 
@@ -16,10 +16,13 @@
     display: flex;
     gap: 5em;
     margin-bottom: 2em;
+    position: sticky;
+    top: 0;
 }
 
 .category-link {
     padding-bottom: 10px;
+    text-transform: uppercase;
 }
 
 .product-img {
@@ -47,4 +50,8 @@
     text-decoration: none;
     color: gray;
     transition: .2s;
+}
+
+.selected {
+    border-bottom: 3px solid #000;
 }
