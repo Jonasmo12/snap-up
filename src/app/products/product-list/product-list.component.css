@@ -49,3 +49,7 @@
     color: gray;
     transition: .2s;
 }
+
+.selected {
+    border-bottom: 3px solid #000;
+}
