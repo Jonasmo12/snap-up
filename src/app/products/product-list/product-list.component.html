@@ -11,6 +11,7 @@
 <div class="container category-nav">
     <div class="row">
         <div class="col-lg-12 categories">
+            <a class="category-link" routerLink="/products">All</a>
             <div class="" *ngFor="let category of categorie$ | async; index as i">
                 <a class="category-link" [class.selected]="category === selectedCategory" (click)="isSelected(category)"
                     routerLink="/products">{{category}}</a>
